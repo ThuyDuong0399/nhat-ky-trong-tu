@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nhật ký trong tù · Ôn tập MYP Tiếng Việt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#24304F;--cream:#FFFAF2;--line:#EBDFCD;--muted:#6B7591;--coral:#D9533B;--teal:#1E8C6E;--khai:#E8577A;--thua:#8E6BD8;--chuyen:#1FA47A;--hop:#3A8BE0;--gold:#F2B94B}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.65}
+h1,h2,h3,h4{font-family:"Baloo 2","Be Vietnam Pro",system-ui,sans-serif;margin:0;line-height:1.15}
+p{margin:.4em 0}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,250,242,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:auto;display:flex;gap:4px;overflow-x:auto;padding:8px 12px;scrollbar-width:none}
+.nav a{white-space:nowrap;font-size:14px;text-decoration:none;padding:7px 12px;border-radius:999px;color:var(--ink);font-weight:500}
+.nav a:hover{background:#F3E8D6}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(180deg,#25245A 0%,#4A3A84 60%,#8A5FA8 100%);padding:58px 24px 64px}
+.hero-in{position:relative;z-index:2;max-width:1040px;margin:auto;display:grid;grid-template-columns:1.3fr .9fr;gap:30px;align-items:end}
+.hero .kicker{color:#FFD9A8}
+.hero h1{font-size:clamp(42px,6vw,70px);font-weight:800;margin:10px 0 2px}
+.hero .sub{color:#FFD9A8;font-family:"Noto Serif",Georgia,serif;font-size:19px;font-style:italic}
+.hero p.lead{color:#ECE7F8;max-width:560px;margin-top:14px}
+.hstats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hstat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 14px}
+.hstat b{display:block;font-family:"Baloo 2",sans-serif;font-size:24px;line-height:1.1;color:#FFE3B3}
+.hstat span{font-size:13px;color:#E4DDF5}
+.moon{position:absolute;z-index:1;right:8%;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#FFF6D6,#F2D98A 60%,rgba(242,217,138,.25) 75%);box-shadow:0 0 80px rgba(255,236,170,.45)}
+.hero svg.skyline{position:absolute;left:0;bottom:-2px;width:100%;height:110px;z-index:1}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+section.sec{max-width:1040px;margin:0 auto;padding:46px 22px;border-top:1px solid var(--line)}
+section.sec:first-of-type{border-top:0}
+.sec h2{font-size:38px;margin-top:6px}
+.bar{width:90px;height:5px;border-radius:5px;background:var(--coral);margin:10px 0 22px}
+.lh{display:flex;align-items:center;gap:10px;margin:30px 0 14px}
+.lh b{flex:0 0 28px;height:28px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-size:14px}
+.lh span{font-family:"Baloo 2",sans-serif;font-size:22px;font-weight:700}
+.lh::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;border-top:5px solid var(--c,var(--coral))}
+.step .n{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--c,var(--coral));font-size:20px}
+.step h4{font-size:18px;margin:2px 0 4px}
+.step p{font-size:14px;color:#3A4563;margin:0}
+.pill{display:inline-block;padding:3px 12px;border-radius:999px;color:#fff;font-weight:700;font-size:12px;background:var(--c,var(--coral));white-space:nowrap}
+.khai{--c:var(--khai)}.thua{--c:var(--thua)}.chuyen{--c:var(--chuyen)}.hop{--c:var(--hop)}
+.tint-khai{background:#FDE8EF}.tint-thua{background:#F0EAFD}.tint-chuyen{background:#E2F5EE}.tint-hop{background:#E4F0FD}
+.note{background:#FFF8E6;border:1.5px dashed var(--gold);border-radius:14px;padding:12px 16px;font-size:15px}
+.ghinho{border-left:5px solid var(--coral);background:linear-gradient(90deg,#FDE9E3,#FFF5EE);border-radius:14px;padding:14px 18px;margin-top:16px}
+.ghinho b.t{font-family:"Baloo 2",sans-serif;color:var(--coral);font-size:16px;letter-spacing:.04em}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);font-size:15px}
+th{background:var(--ink);color:#fff;text-align:left;font-size:13px;font-weight:600;padding:10px 12px}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+.hv{font-family:"Noto Serif CJK TC","Noto Serif TC","Songti TC",serif}
+.poem{font-family:"Noto Serif",Georgia,serif;font-size:18px;line-height:1.95;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 26px}
+.poem .cap{display:block;text-align:right;font-family:"Be Vietnam Pro",sans-serif;font-size:13px;color:var(--muted);margin-top:6px}
+.zh{font-family:"Noto Serif CJK TC","Noto Serif TC","Songti TC",serif;font-size:19px;color:var(--c,var(--ink));letter-spacing:.08em}
+.wordgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.wc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.wc .hn{font-family:"Noto Serif CJK TC","Noto Serif TC",serif;font-size:22px}
+.wc b{display:block}
+.wc i{color:#2C7F8C;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chips span{font-size:12.5px;background:#F4EEE3;border-radius:999px;padding:2px 10px;color:#4A3F2F}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+.tbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
+.tbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pane{display:none}
+.pane.on{display:block}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:14px}
+.pc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:5px}
+.pc .bnum{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--coral);font-size:14px}
+.pc h3{font-size:19px}
+.pc p{margin:0;font-size:14.5px;color:#3A4563}
+.pc.taught{border:2px solid var(--teal)}
+.fbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.fbtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 13px;font:inherit;font-size:13px;cursor:pointer;color:var(--ink)}
+.fbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+#q{flex:1;min-width:200px;padding:9px 14px;border-radius:999px;border:1px solid var(--line);font:inherit;background:#fff}
+.q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:12px}
+.q .qn{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--coral);font-size:17px}
+.opts button{display:block;width:100%;text-align:left;margin:6px 0;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:#FFFDF9;font:inherit;cursor:pointer;color:var(--ink)}
+.opts button.ok{background:#DDF4EA;border-color:var(--chuyen)}
+.opts button.bad{background:#FDE3E0;border-color:var(--coral)}
+.reveal{margin-top:8px;font-size:14.5px;background:#F4F7FD;border-radius:10px;padding:10px 12px;display:none}
+.reveal.on{display:block}
+.btnr{margin-top:8px;border:none;background:var(--teal);color:#fff;border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer;font-weight:600}
+.blank{border-bottom:1px dotted #9AA3B8;height:26px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:stretch}
+.flow .fb{border-radius:16px;padding:12px;color:var(--ink);border-top:5px solid var(--c)}
+.flow .fb h4{color:var(--c);font-size:17px}
+.flow .arr{display:none}
+footer{max-width:1040px;margin:0 auto;padding:26px 22px 40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:820px){.hero-in{grid-template-columns:1fr}.grid2,.grid3,.grid4,.wordgrid,.flow{grid-template-columns:1fr 1fr}.sec h2{font-size:30px}.moon{width:100px;height:100px;right:4%}}
+@media (max-width:520px){.grid2,.grid3,.grid4,.wordgrid,.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+<a href="#huong-dan">Cách dùng</a>
+<a href="#tim-hieu">Tìm hiểu chung</a>
+<a href="#on-chinh">4 bài ôn chính</a>
+<a href="#tra-cuu">Tra cứu các bài</a>
+<a href="#nghe-thuat">Biện pháp NT</a>
+<a href="#tong-ket">Tổng kết</a>
+<a href="#tu-kiem-tra">Tự kiểm tra</a>
+<a href="#dap-an">Đáp án</a>
+</div></nav>
+
+<header class="hero">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div>
+      <div class="kicker" style="color:#FFD9A8">Tài liệu học · MYP Vietnamese Language Acquisition</div>
+      <h1>Nhật ký trong tù</h1>
+      <div class="sub">Hồ Chí Minh · Ôn tập đọc hiểu thơ thất ngôn tứ tuyệt</div>
+      <p class="lead">Bốn bài thơ đã dạy kỹ được ôn lại theo từng câu, kèm phần tra cứu nội dung và biện pháp nghệ thuật của các bài còn lại trong tập thơ. Gợi ý đọc theo thứ tự: Tìm hiểu chung → 4 bài ôn chính → Tra cứu → Tự kiểm tra.</p>
+    </div>
+    <div class="hstats">
+      <div class="hstat"><b>4</b><span>bài ôn chính, phân tích từng câu</span></div>
+      <div class="hstat"><b>58</b><span>mục thơ trong file, có nội dung và biện pháp</span></div>
+      <div class="hstat"><b>1942–43</b><span>thời gian viết trong nhà tù</span></div>
+      <div class="hstat"><b>Hán → Việt</b><span>phiên âm, dịch nghĩa, dịch thơ</span></div>
+    </div>
+  </div>
+  <svg class="skyline" viewBox="0 0 1000 110" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 80 L120 40 L230 70 L360 25 L480 65 L600 35 L740 72 L860 30 L1000 60 L1000 110 L0 110Z" fill="#2E2A66" opacity=".85"/>
+    <path d="M0 96 L160 62 L300 88 L460 58 L620 90 L780 66 L920 92 L1000 80 L1000 110 L0 110Z" fill="#FFFAF2"/>
+  </svg>
+</header>
+
+<section class="sec" id="huong-dan">
+  <div class="kicker">Trang chủ</div>
+  <h2>Cách dùng trang này</h2>
+  <div class="bar"></div>
+  <div class="grid4">
+    <div class="step" style="--c:var(--khai)"><div class="n">①</div><h4>Từng chữ Hán Việt</h4><p>Đọc phiên âm, nhớ nghĩa từng chữ trước khi hiểu cả câu.</p></div>
+    <div class="step" style="--c:var(--thua)"><div class="n">②</div><h4>Hiểu nghĩa câu thơ</h4><p>Nghĩa đen, cảm nhận và điều tác giả muốn gửi gắm.</p></div>
+    <div class="step" style="--c:var(--chuyen)"><div class="n">③</div><h4>Nghệ thuật &amp; tác dụng</h4><p>Gọi tên biện pháp, chỉ ra ví dụ và nói tác dụng của nó.</p></div>
+    <div class="step" style="--c:var(--hop)"><div class="n">④</div><h4>Ghi nhớ</h4><p>Một ý quan trọng nhất của mỗi câu. Học thuộc trước khi kiểm tra.</p></div>
+  </div>
+
+  <div class="lh"><b>A</b><span>Bốn phần của một bài thất ngôn tứ tuyệt</span></div>
+  <div class="grid4">
+    <div class="step khai" style="--c:var(--khai)"><h4>Khai · Câu 1</h4><p>Mở ý, giới thiệu cảnh hoặc hoàn cảnh.</p></div>
+    <div class="step thua" style="--c:var(--thua)"><h4>Thừa · Câu 2</h4><p>Tiếp ý, phát triển cảnh hoặc tâm trạng.</p></div>
+    <div class="step chuyen" style="--c:var(--chuyen)"><h4>Chuyển · Câu 3</h4><p>Chuyển hướng: thường đưa con người hoặc hành động vào.</p></div>
+    <div class="step hop" style="--c:var(--hop)"><h4>Hợp · Câu 4</h4><p>Kết ý, thường là hình ảnh cuối hoặc bài học.</p></div>
+  </div>
+
+  <div class="lh"><b>B</b><span>Mẹo học</span></div>
+  <div class="note"><b>Mỗi ngày học kĩ 1 bài:</b> đọc to phần phiên âm, viết lại chữ Hán Việt, rồi nói nghĩa bằng tiếng Việt bằng lời của mình. Sau đó mới đối chiếu với bản dịch.</div>
+  <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Khung bốn phần Khai – Thừa – Chuyển – Hợp là xương sống của mọi bài thất ngôn tứ tuyệt. Thuộc khung này trước, rồi mới đi vào từng chữ.</p></div>
+</section>
+<section class="sec" id="tim-hieu">
+  <div class="kicker">Phần 1 · Tìm hiểu chung</div>
+  <h2>Tác giả, hoàn cảnh và thể thơ</h2>
+  <div class="bar"></div>
+
+  <div class="lh"><b>A</b><span>Tác giả</span></div>
+  <table>
+    <tr><th style="width:26%">Tên khai sinh</th><td>Nguyễn Sinh Cung</td></tr>
+    <tr><th>Năm sinh – mất</th><td>19/5/1890 – 2/9/1969</td></tr>
+    <tr><th>Quê</th><td>Làng Kim Liên (làng Sen), huyện Nam Đàn, tỉnh Nghệ An</td></tr>
+    <tr><th>Vai trò</th><td>Lãnh tụ cách mạng Việt Nam; nhà thơ, nhà văn lớn</td></tr>
+    <tr><th>Vinh danh</th><td>UNESCO ghi nhận (1990): Anh hùng giải phóng dân tộc, Nhà văn hoá kiệt xuất</td></tr>
+  </table>
+
+  <div class="lh"><b>B</b><span>Một người, nhiều tên gọi</span></div>
+  <div class="grid4">
+    <div class="step" style="--c:var(--khai)"><h4>Nguyễn Sinh Cung</h4><p>tên khai sinh</p></div>
+    <div class="step" style="--c:var(--thua)"><h4>Nguyễn Tất Thành</h4><p>tên thời đi học, tuổi trẻ</p></div>
+    <div class="step" style="--c:var(--chuyen)"><h4>Nguyễn Ái Quốc</h4><p>bút danh, tên hoạt động ở nước ngoài</p></div>
+    <div class="step" style="--c:var(--hop)"><h4>Hồ Chí Minh</h4><p>tên dùng từ năm 1942</p></div>
+  </div>
+
+  <div class="lh"><b>C</b><span>Các mốc cuộc đời</span></div>
+  <div class="grid3">
+    <div class="card"><b>1890</b> Sinh ra ở Nghệ An.</div>
+    <div class="card"><b>1911</b> Ra nước ngoài tìm đường cứu nước.</div>
+    <div class="card"><b>1941</b> Về nước lãnh đạo cách mạng.</div>
+    <div class="card"><b>1942–1943</b> Bị giam ở Quảng Tây và viết <i>Nhật ký trong tù</i>.</div>
+    <div class="card"><b>1945</b> Đọc <i>Tuyên ngôn Độc lập</i> (2/9).</div>
+    <div class="card"><b>1969</b> Qua đời tại Hà Nội.</div>
+  </div>
+
+  <div class="lh"><b>D</b><span>Hoàn cảnh sáng tác</span></div>
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin-bottom:6px">Chuyện gì đã xảy ra?</h4>
+      <p>Tháng 8 năm 1942, Bác sang Trung Quốc để tìm sự giúp đỡ của các đồng minh cho cách mạng Việt Nam. Đến Túc Vinh (Quảng Tây), Bác bị chính quyền Tưởng Giới Thạch bắt giam vô cớ.</p>
+    </div>
+    <div class="card">
+      <h4 style="margin-bottom:6px">Trong hơn 13 tháng bị giam</h4>
+      <p>Bác bị chuyển lao qua khoảng 30 nhà lao của 13 huyện. Thường phải đi bộ qua đường núi xa xôi, vất vả. Bác làm thơ bằng chữ Hán để ghi lại những điều thấy, nghĩ, cảm.</p>
+    </div>
+  </div>
+
+  <div class="lh"><b>E</b><span>Tập thơ <i>Nhật ký trong tù</i></span></div>
+  <div class="grid3">
+    <div class="card"><b style="font-family:'Baloo 2';font-size:22px;color:var(--coral)">133 bài</b><p>phần lớn là thất ngôn tứ tuyệt (theo tài liệu học)</p></div>
+    <div class="card"><b style="font-family:'Baloo 2';font-size:22px;color:var(--teal)">Chữ Hán → tiếng Việt</b><p>viết bằng chữ Hán, sau được dịch ra tiếng Việt</p></div>
+    <div class="card"><b style="font-family:'Baloo 2';font-size:22px;color:var(--hop)">8/1942 – 9/1943</b><p>thời gian sáng tác, trong những ngày bị giam</p></div>
+  </div>
+  <div class="note" style="margin-top:14px"><b>Chú ý:</b> “Nhật ký” ở đây không viết bằng văn xuôi mà bằng thơ. Mỗi bài giống như một trang nhật ký: ghi lại một khoảnh khắc trên đường đi hoặc trong nhà lao.</div>
+
+  <div class="lh"><b>F</b><span>Thể thơ thất ngôn tứ tuyệt</span></div>
+  <div class="grid4">
+    <div class="step" style="--c:var(--khai)"><div class="n">Thất</div><p>bảy (7)</p></div>
+    <div class="step" style="--c:var(--thua)"><div class="n">ngôn</div><p>chữ</p></div>
+    <div class="step" style="--c:var(--chuyen)"><div class="n">tứ</div><p>bốn (4)</p></div>
+    <div class="step" style="--c:var(--hop)"><div class="n">tuyệt</div><p>câu (dứt, ngắt)</p></div>
+  </div>
+  <p style="margin-top:10px">→ Mỗi bài có <b>4 câu, mỗi câu 7 chữ</b>, có nguồn gốc từ thơ Đường (Trung Quốc). Thể thơ ngắn nhưng rất hàm súc: ít chữ, nhiều ý.</p>
+
+  <table style="margin-top:12px">
+    <tr><th style="width:24%">Quy tắc</th><th>Nghĩa là gì?</th><th style="width:30%">Ví dụ (bài Chiều tối)</th></tr>
+    <tr><td><b>Số câu, số chữ</b></td><td>4 câu, mỗi câu 7 chữ.</td><td>4 × 7 = 28 chữ</td></tr>
+    <tr><td><b>Vần</b></td><td>Vần bằng, gieo ở cuối câu 2 và câu 4 (câu 1 có thể gieo hoặc không).</td><td>“không – hồng” (vần “ông”)</td></tr>
+    <tr><td><b>Thanh bằng, trắc</b></td><td>B: không dấu, dấu huyền. T: sắc, hỏi, ngã, nặng.</td><td>Vần “không – hồng” đều là thanh bằng</td></tr>
+    <tr><td><b>Nhịp</b></td><td>Thường ngắt nhịp 4/3.</td><td>Quyện điểu quy lâm / tầm túc thụ</td></tr>
+    <tr><td><b>Bố cục</b></td><td>4 câu: Khai – Thừa – Chuyển – Hợp.</td><td>xem phần 3 bên dưới</td></tr>
+  </table>
+  <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Thất ngôn tứ tuyệt: <b>4 câu × 7 chữ</b>, nhịp 4/3, bố cục <b>Khai – Thừa – Chuyển – Hợp</b>. Chiều tối gieo vần ở câu 2 và 4 (không – hồng).</p></div>
+</section>
+<section class="sec" id="on-chinh">
+  <div class="kicker">Phần 2 · Bốn bài ôn chính</div>
+  <h2>Đọc hiểu từng câu</h2>
+  <div class="bar"></div>
+  <p>Chọn một bài để xem. Mỗi bài có đủ: phiên âm, dịch nghĩa, dịch thơ, từ khó và phân tích từng câu.</p>
+  <div class="tabs">
+    <button class="tbtn on" data-p="p-ngamtrang">Ngắm trăng</button>
+    <button class="tbtn" data-p="p-chieutoi">Chiều tối</button>
+    <button class="tbtn" data-p="p-gaogao">Nghe tiếng giã gạo</button>
+    <button class="tbtn" data-p="p-dicuong">Đi đường</button>
+  </div>
+
+  <!-- NGẮM TRĂNG -->
+  <div class="pane on" id="p-ngamtrang">
+    <div class="kicker">Bài 21 · Vọng nguyệt</div>
+    <h3 style="font-size:32px;margin:4px 0 10px">Ngắm trăng <span class="pill" style="--c:var(--teal)">Ôn chính</span></h3>
+
+    <div class="lh"><b>1</b><span>Nguyên tắc &amp; phiên âm</span></div>
+    <div class="card">
+      <div class="zh" style="font-size:22px;line-height:1.9;color:var(--ink)">獄中無酒亦無花，<br>對此良宵奈若何？<br>人向窗前看明月，<br>月從窗隙看詩家。</div>
+      <div style="margin-top:12px;font-family:'Noto Serif',serif;font-size:18px;line-height:1.9">
+        <span style="color:var(--khai)">Ngục trung vô tửu diệc vô hoa,</span><br>
+        <span style="color:var(--thua)">Đối thử lương tiêu nại nhược hà?</span><br>
+        <span style="color:var(--chuyen)">Nhân hướng song tiền khán minh nguyệt,</span><br>
+        <span style="color:var(--hop)">Nguyệt tòng song khích khán thi gia.</span>
+      </div>
+      <p style="margin-top:10px;font-size:14.5px"><b>Cách đọc:</b> ngắt nhịp 4/3. Hai câu đầu đọc chậm, giọng trầm. Hai câu sau đọc nhanh hơn, nhẹ, có chút vui.</p>
+      <p style="font-size:14.5px"><b>Chú ý:</b> chữ <b>hà</b>, <b>gia</b> và <b>hoa</b> cùng vần “a” nên câu 1, 2 và 4 gieo vần với nhau. Chữ <b>nguyệt</b> ở câu 3 không gieo vần.</p>
+    </div>
+
+    <div class="lh"><b>2</b><span>Dịch nghĩa &amp; dịch thơ</span></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-bottom:6px">Dịch nghĩa (ý, không dịch từng chữ)</h4>
+        <p>Trong ngục không có rượu, cũng chẳng có hoa. Đối diện với đêm đẹp thế này, biết làm sao? Người hướng ra cửa sổ ngắm trăng sáng; trăng từ khe cửa lại nhìn ngắm nhà thơ.</p>
+      </div>
+      <div class="poem">
+        <div style="font-family:'Baloo 2';color:var(--coral);font-size:20px;font-weight:700">NGẮM TRĂNG</div>
+        Trong tù không rượu cũng không hoa,<br>
+        Cảnh đẹp đêm nay khó hững hờ.<br>
+        Người ngắm trăng soi ngoài cửa sổ,<br>
+        Trăng nhòm khe cửa ngắm nhà thơ.
+        <span class="cap">Nam Trân dịch</span>
+      </div>
+    </div>
+
+    <div class="lh"><b>3</b><span>Từng chữ Hán Việt</span></div>
+    <div class="wordgrid">
+      <div class="wc"><div class="hn">獄</div><b>ngục</b>nhà tù <i>prison</i></div>
+      <div class="wc"><div class="hn">酒</div><b>tửu</b>rượu <i>wine</i></div>
+      <div class="wc"><div class="hn">良宵</div><b>lương tiêu</b>đêm đẹp <i>a fine night</i></div>
+      <div class="wc"><div class="hn">奈若何</div><b>nại nhược hà</b>biết làm sao <i>what can be done</i></div>
+      <div class="wc"><div class="hn">窗</div><b>song</b>cửa sổ <i>window</i></div>
+      <div class="wc"><div class="hn">詩家</div><b>thi gia</b>nhà thơ <i>the poet</i></div>
+    </div>
+
+    <div class="lh"><b>4</b><span>Phân tích từng câu</span></div>
+    <div class="grid2">
+      <div class="card khai tint-khai" style="--c:var(--khai)">
+        <span class="pill">Khai · Câu 1</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> thiếu thốn vật chất, không có rượu, không có hoa.</p>
+        <p><b>Cảm nhận:</b> nhà tù không có thú vui thường ngày, nhưng tâm hồn người tù vẫn không thiếu.</p>
+        <div class="chips"><span>điệp từ phủ định (vô… diệc vô)</span><span>đối vật chất – thiên nhiên</span></div>
+      </div>
+      <div class="card thua tint-thua" style="--c:var(--thua)">
+        <span class="pill">Thừa · Câu 2</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> đêm đẹp như thế này, khiến lòng không thể thờ ơ.</p>
+        <p><b>Cảm nhận:</b> câu hỏi “biết làm sao?” cho thấy người tù rung động trước vẻ đẹp của trăng.</p>
+        <div class="chips"><span>câu hỏi tu từ</span><span>tâm trạng rung động</span></div>
+      </div>
+      <div class="card chuyen tint-chuyen" style="--c:var(--chuyen)">
+        <span class="pill">Chuyển · Câu 3</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> người tù hướng ra cửa sổ để ngắm trăng.</p>
+        <p><b>Cảm nhận:</b> câu thơ chuyển từ tâm trạng sang hành động: người tù không khép mình trong buồn bã mà hướng ra ngoài. Cửa sổ là ranh giới giữa tù và tự do.</p>
+        <div class="chips"><span>chuyển ý</span><span>cửa sổ: biểu tượng ranh giới</span></div>
+      </div>
+      <div class="card hop tint-hop" style="--c:var(--hop)">
+        <span class="pill">Hợp · Câu 4</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> trăng cũng nhìn qua khe cửa để ngắm nhà thơ.</p>
+        <p><b>Cảm nhận:</b> chủ thể bị đảo ngược: người ngắm trăng thành trăng ngắm người. Thiên nhiên và con người gần gũi nhau, và người tù vẫn là “nhà thơ”.</p>
+        <div class="chips"><span>nhân hoá trăng</span><span>đảo chủ thể</span><span>tinh thần thi sĩ</span></div>
+      </div>
+    </div>
+
+    <div class="lh"><b>5</b><span>Nghệ thuật &amp; tác dụng</span></div>
+    <table>
+      <tr><th style="width:26%">Biện pháp</th><th style="width:34%">Ví dụ</th><th>Tác dụng</th></tr>
+      <tr><td><b>Nhân hoá</b><br><i style="color:#2C7F8C">personification</i></td><td><i>“Nguyệt tòng song khích khán thi gia”</i></td><td>Trăng có hành động như con người, nên người tù bớt cô đơn.</td></tr>
+      <tr><td><b>Đối lập</b><br><i style="color:#2C7F8C">contrast</i></td><td>không rượu, không hoa ↔ đêm đẹp</td><td>Thiếu thốn bên ngoài làm nổi bật sự giàu có bên trong.</td></tr>
+      <tr><td><b>Câu hỏi tu từ</b><br><i style="color:#2C7F8C">rhetorical question</i></td><td><i>“Đối thử lương tiêu nại nhược hà?”</i></td><td>Thể hiện sự rung động, không cần trả lời.</td></tr>
+      <tr><td><b>Ẩn dụ</b><br><i style="color:#2C7F8C">metaphor</i></td><td>song (cửa sổ)</td><td>Gợi ranh giới giữa tù và tự do.</td></tr>
+    </table>
+    <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Ngắm trăng dùng <b>đối lập</b> thiếu thốn – đầy đủ, và <b>đảo chủ thể</b> ở câu 4. Người tù vẫn là “nhà thơ”: tinh thần không bị giam cầm.</p></div>
+    <p style="margin-top:10px"><a href="#tra-cuu" style="color:var(--teal);font-weight:600">→ Xem các bài khác cùng thời gian bị giam</a></p>
+  </div>
+
+  <!-- CHIỀU TỐI -->
+  <div class="pane" id="p-chieutoi">
+    <div class="kicker">Mộ · 暮</div>
+    <h3 style="font-size:32px;margin:4px 0 10px">Chiều tối <span class="pill" style="--c:var(--teal)">Ôn chính</span></h3>
+
+    <div class="lh"><b>1</b><span>Nguyên tắc &amp; phiên âm</span></div>
+    <div class="card">
+      <div class="zh" style="font-size:22px;line-height:1.9;color:var(--ink)">倦鳥歸林尋宿樹，<br>孤雲漫漫度天空；<br>山村少女磨苞粟，<br>苞粟磨完爐已紅。</div>
+      <div style="margin-top:12px;font-family:'Noto Serif',serif;font-size:18px;line-height:1.9">
+        <span style="color:var(--khai)">Quyện điểu quy lâm tầm túc thụ,</span><br>
+        <span style="color:var(--thua)">Cô vân mạn mạn độ thiên không;</span><br>
+        <span style="color:var(--chuyen)">Sơn thôn thiếu nữ ma bao túc,</span><br>
+        <span style="color:var(--hop)">Bao túc ma hoàn lô dĩ hồng.</span>
+      </div>
+      <p style="margin-top:10px;font-size:14.5px"><b>Cách đọc:</b> câu 1–2 đọc chậm, nhẹ, hơi buồn. Câu 3–4 đọc nhanh hơn, ấm áp; nhấn mạnh chữ <b>hồng</b>.</p>
+      <p style="font-size:14.5px"><b>Chú ý:</b> chữ màu cam là chữ gieo vần: không – hồng (vần “ông”). Nhan đề “Mộ” (暮) = chiều tối: chữ này có hình mặt trời (日) lặn xuống dưới đám cỏ.</p>
+    </div>
+
+    <div class="lh"><b>2</b><span>Dịch nghĩa &amp; dịch thơ</span></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-bottom:6px">Dịch nghĩa (sát nghĩa từng chữ)</h4>
+        <p>Chim mỏi về rừng tìm cây ngủ. Chòm mây lẻ trôi lững lờ trên tầng không. Cô em xóm núi xay ngô. Ngô xay vừa xong, lò than đã đỏ.</p>
+      </div>
+      <div class="poem">
+        <div style="font-family:'Baloo 2';color:var(--coral);font-size:20px;font-weight:700">CHIỀU TỐI</div>
+        Chim mỏi về rừng tìm chốn ngủ,<br>
+        Chòm mây trôi nhẹ giữa tầng không;<br>
+        Cô em xóm núi xay ngô tối,<br>
+        Xay hết, lò than đã rực hồng.
+        <span class="cap">Nam Trân dịch</span>
+      </div>
+    </div>
+
+    <div class="lh"><b>3</b><span>Từng chữ Hán Việt</span></div>
+    <div class="wordgrid">
+      <div class="wc"><div class="hn">倦鳥</div><b>quyện điểu</b>chim mỏi <i>tired bird</i></div>
+      <div class="wc"><div class="hn">宿樹</div><b>túc thụ</b>cây để ngủ đêm <i>a tree to roost in</i></div>
+      <div class="wc"><div class="hn">孤雲</div><b>cô vân</b>chòm mây lẻ loi <i>a lone cloud</i></div>
+      <div class="wc"><div class="hn">漫漫</div><b>mạn mạn</b>chậm chạp, lững lờ <i>drifting slowly</i></div>
+      <div class="wc"><div class="hn">磨</div><b>ma</b>xay <i>to grind</i></div>
+      <div class="wc"><div class="hn">爐紅</div><b>lô hồng</b>lò than đỏ rực <i>glowing red stove</i></div>
+    </div>
+
+    <div class="lh"><b>4</b><span>Phân tích từng câu</span></div>
+    <div class="grid2">
+      <div class="card khai tint-khai" style="--c:var(--khai)">
+        <span class="pill">Khai · Câu 1</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> chim mỏi về rừng, trời đã về chiều.</p>
+        <p><b>Cảm nhận:</b> hình ảnh cánh chim mỏi gợi sự mệt mỏi của người tù sau một ngày bị giải đi.</p>
+        <div class="chips"><span>bút pháp chấm phá</span><span>hình ảnh cổ điển</span><span>tả cảnh ngụ tình</span></div>
+      </div>
+      <div class="card thua tint-thua" style="--c:var(--thua)">
+        <span class="pill">Thừa · Câu 2</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> chòm mây lẻ trôi chậm trên bầu trời rộng.</p>
+        <p><b>Cảm nhận:</b> “cô vân” giống người tù cô đơn, lẻ loi nơi đất khách.</p>
+        <div class="chips"><span>từ láy “mạn mạn”</span><span>đối lập cô vân ↔ thiên không</span><span>ẩn dụ</span></div>
+      </div>
+      <div class="card chuyen tint-chuyen" style="--c:var(--chuyen)">
+        <span class="pill">Chuyển · Câu 3</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> cô gái xóm núi đang xay ngô.</p>
+        <p><b>Cảm nhận:</b> bức tranh chuyển từ thiên nhiên sang con người lao động. Dù là người tù, Bác vẫn chú ý đến cuộc sống bình dị của người dân.</p>
+        <div class="chips"><span>bước chuyển</span><span>hình ảnh hiện đại</span><span>điệp vòng</span></div>
+      </div>
+      <div class="card hop tint-hop" style="--c:var(--hop)">
+        <span class="pill">Hợp · Câu 4</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> ngô xay xong, lò than đã đỏ rực.</p>
+        <p><b>Cảm nhận:</b> ánh lửa hồng xua đi bóng tối, cái lạnh, cái buồn; mang lại hơi ấm và niềm vui. Đó là tinh thần lạc quan của người tù.</p>
+        <div class="chips"><span>điệp vòng (bao túc… ma hoàn)</span><span>nhãn tự “hồng”</span><span>lấy sáng tả tối</span></div>
+      </div>
+    </div>
+
+    <div class="lh"><b>5</b><span>Nghệ thuật &amp; tác dụng</span></div>
+    <table>
+      <tr><th style="width:26%">Biện pháp</th><th style="width:34%">Ví dụ</th><th>Tác dụng</th></tr>
+      <tr><td><b>Bút pháp chấm phá</b><br><i style="color:#2C7F8C">sketching</i></td><td>quyện điểu quy lâm</td><td>Vài nét chính mà gợi cả buổi chiều nơi núi rừng.</td></tr>
+      <tr><td><b>Điệp vòng</b><br><i style="color:#2C7F8C">circular repetition</i></td><td><i>ma bao túc / bao túc ma hoàn</i></td><td>Gợi vòng quay cối xay, thời gian trôi; nối hai câu chặt chẽ.</td></tr>
+      <tr><td><b>Nhãn tự</b><br><i style="color:#2C7F8C">key word</i></td><td>hồng</td><td>Chữ “hồng” là con mắt của bài thơ: toả sáng, sưởi ấm cả bức tranh.</td></tr>
+      <tr><td><b>Lấy sáng tả tối</b><br><i style="color:#2C7F8C">light shows darkness</i></td><td>lô dĩ hồng</td><td>Lửa đỏ rực cho biết trời đã tối mà không cần chữ “tối”.</td></tr>
+    </table>
+    <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Bài thơ có <b>hai bức tranh</b>: thiên nhiên chiều tối (buồn, vắng) và cuộc sống xóm núi (ấm áp). Chữ <b>hồng</b> là nhãn tự, làm sáng cả bài và cho thấy tinh thần lạc quan của Bác.</p></div>
+  </div>
+
+  <!-- NGHE TIẾNG GIÃ GẠO -->
+  <div class="pane" id="p-gaogao">
+    <div class="kicker">Bài 70 trong file · Văn thung mễ thanh 聞春米聲</div>
+    <h3 style="font-size:32px;margin:4px 0 10px">Nghe tiếng giã gạo <span class="pill" style="--c:var(--teal)">Ôn chính</span></h3>
+
+    <div class="lh"><b>1</b><span>Nguyên tắc &amp; phiên âm</span></div>
+    <div class="card">
+      <div class="zh" style="font-size:22px;line-height:1.9;color:var(--ink)">米被春時很痛苦，<br>既春之後白如綿；<br>人生在世也這樣，<br>困難是你玉成天。</div>
+      <div style="margin-top:12px;font-family:'Noto Serif',serif;font-size:18px;line-height:1.9">
+        <span style="color:var(--khai)">Mễ bị thung thì, ngận thống khổ,</span><br>
+        <span style="color:var(--thua)">Ký thung chi hậu, bạch như miên;</span><br>
+        <span style="color:var(--chuyen)">Nhân sinh tại thế dã giá dạng,</span><br>
+        <span style="color:var(--hop)">Khốn nạn thị nhĩ ngọc thành thiên.</span>
+      </div>
+      <p style="margin-top:10px;font-size:14.5px"><b>Cách đọc:</b> câu 1 đọc chậm, nặng (đau đớn); câu 2 đọc nhẹ, sáng. Câu 3–4 đọc chậm, chắc, như một lời khuyên.</p>
+      <p style="font-size:14.5px"><b>Chú ý:</b> chữ màu xanh là chữ gieo vần: <i>miên – thiên</i> (vần “iên”). Chữ <b>很</b> có sách đọc “ngận”, có sách đọc “hắn”, nghĩa là <b>rất</b>.</p>
+    </div>
+
+    <div class="lh"><b>2</b><span>Dịch nghĩa &amp; dịch thơ</span></div>
+    <div class="grid2">
+      <div class="card">
+        <h4 style="margin-bottom:6px">Dịch nghĩa (ý, không dịch từng chữ)</h4>
+        <p>Gạo lúc đang giã rất đau đớn. Lúc giã xong rồi thì trắng như bông. Người sống trên đời cũng vậy. Gian nan là dịp rèn giũa để mình thành ngọc.</p>
+      </div>
+      <div class="poem">
+        <div style="font-family:'Baloo 2';color:var(--teal);font-size:20px;font-weight:700">NGHE TIẾNG GIÃ GẠO</div>
+        Gạo đem vào giã bao đau đớn,<br>
+        Gạo giã xong rồi, trắng tựa bông;<br>
+        Sống ở trên đời người cũng vậy,<br>
+        Gian nan rèn luyện mới thành công.
+        <span class="cap">Văn Trực, Văn Phụng dịch</span>
+      </div>
+    </div>
+
+    <div class="lh"><b>3</b><span>Từng chữ Hán Việt</span></div>
+    <div class="wordgrid">
+      <div class="wc"><div class="hn">米</div><b>mễ</b>gạo <i>rice</i></div>
+      <div class="wc"><div class="hn">被春</div><b>bị thung</b>bị giã <i>being pounded</i></div>
+      <div class="wc"><div class="hn">痛苦</div><b>thống khổ</b>đau khổ, đau đớn <i>pain, suffering</i></div>
+      <div class="wc"><div class="hn">綿</div><b>miên</b>bông <i>cotton</i></div>
+      <div class="wc"><div class="hn">人生</div><b>nhân sinh</b>đời người, người sống <i>human life</i></div>
+      <div class="wc"><div class="hn">玉成</div><b>ngọc thành</b>rèn thành ngọc <i>to polish into jade</i></div>
+    </div>
+    <div class="note" style="margin-top:10px"><b>Chú ý:</b> “Khốn nạn” (困難) trong chữ Hán nghĩa là <b>gian nan, khó khăn</b>. Nhưng trong tiếng Việt hôm nay, “khốn nạn” là từ chửi mắng, nên em <b>không</b> dùng từ này với nghĩa “khó khăn” khi nói chuyện.</div>
+
+    <div class="lh"><b>4</b><span>Phân tích từng câu</span></div>
+    <div class="grid2">
+      <div class="card khai tint-khai" style="--c:var(--khai)">
+        <span class="pill">Khai · Câu 1</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> hạt gạo khi bị giã thì rất đau đớn.</p>
+        <p><b>Cảm nhận:</b> hạt gạo biết đau như người, gợi những nỗi khổ của người tù bị giam.</p>
+        <div class="chips"><span>nhân hoá “mễ… thống khổ”</span><span>ẩn dụ “bị giã”</span><span>ngôn ngữ giản dị</span></div>
+      </div>
+      <div class="card thua tint-thua" style="--c:var(--thua)">
+        <span class="pill">Thừa · Câu 2</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> giã xong rồi, gạo trắng như bông.</p>
+        <p><b>Cảm nhận:</b> trải qua đau đớn, hạt gạo lại trắng đẹp và có giá trị hơn. Chịu thử thách thì trở nên tốt hơn.</p>
+        <div class="chips"><span>so sánh “bạch như miên”</span><span>tương phản đau – đẹp</span><span>từ chỉ thời gian “thì / chi hậu”</span></div>
+      </div>
+      <div class="card chuyen tint-chuyen" style="--c:var(--chuyen)">
+        <span class="pill">Chuyển · Câu 3</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> người sống trên đời cũng như vậy.</p>
+        <p><b>Cảm nhận:</b> câu thơ là chiếc cầu nối: từ chuyện hạt gạo (nghĩa đen) sang chuyện con người (nghĩa bóng). Bài thơ trở thành bài học làm người.</p>
+        <div class="chips"><span>bước chuyển</span><span>so sánh ngầm (người ↔ gạo)</span><span>từ thông dụng</span></div>
+      </div>
+      <div class="card hop tint-hop" style="--c:var(--hop)">
+        <span class="pill">Hợp · Câu 4</span>
+        <p style="margin-top:8px"><b>Nghĩa:</b> gian nan là dịp rèn giũa mình thành ngọc.</p>
+        <p><b>Cảm nhận:</b> bác nói thẳng với người nghe như tự nhủ mình: vượt khó để trưởng thành, có phẩm chất đẹp.</p>
+        <div class="chips"><span>ẩn dụ “ngọc thành”</span><span>triết lí sống</span><span>giọng tâm tình</span></div>
+      </div>
+    </div>
+
+    <div class="lh"><b>5</b><span>Nghệ thuật &amp; tác dụng</span></div>
+    <table>
+      <tr><th style="width:26%">Biện pháp</th><th style="width:34%">Ví dụ</th><th>Tác dụng</th></tr>
+      <tr><td><b>Nhân hoá</b><br><i style="color:#2C7F8C">personification</i></td><td><i>mễ… thống khổ</i></td><td>Hạt gạo biết đau như người → gần gũi, gợi nỗi đau.</td></tr>
+      <tr><td><b>So sánh</b><br><i style="color:#2C7F8C">simile</i></td><td><i>bạch như miên</i></td><td>Gạo trắng như bông → kết quả tốt đẹp sau thử thách.</td></tr>
+      <tr><td><b>Tương phản</b><br><i style="color:#2C7F8C">contrast</i></td><td>thống khổ ↔ bạch như miên</td><td>Đau đớn trước – trắng đẹp sau → giá trị của thử thách.</td></tr>
+      <tr><td><b>Ẩn dụ</b><br><i style="color:#2C7F8C">metaphor</i></td><td>bị giã; ngọc</td><td>Bị giã = gian nan; ngọc = người có phẩm chất đẹp.</td></tr>
+      <tr><td><b>Lối nói ngụ ngôn</b><br><i style="color:#2C7F8C">fable-like analogy</i></td><td>gạo ⇄ người (câu 3)</td><td>Mượn chuyện vật để nói chuyện người → dễ hiểu, sâu sắc.</td></tr>
+    </table>
+    <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Bài thơ có <b>hai lớp nghĩa</b>: nghĩa đen (chuyện giã gạo) và nghĩa bóng (bài học làm người). Gạo bị giã → trắng như bông (đẹp) = người gặp gian nan → thành ngọc (phẩm chất tốt).</p></div>
+  </div>
+
+  <div class="pane" id="p-dicuong">
+    <div class="kicker">Ôn chính · Đi đường</div>
+    <h3 style="font-size:32px;margin:4px 0 10px">Đi đường <span class="pill" style="--c:var(--teal)">Bài 5–7 · Thế lộ nan</span></h3>
+    <div class="note"><b>Ghi chú:</b> trong file, mục này mang đầu đề “Thế lộ nan” (bài 5–7), phụ đề “Đường đời hiểm trở”. Nếu bản dạy của bạn dùng tên “Đi đường” cho cùng bài này thì nội dung giống nhau. Bản dịch dưới đây do mình viết mới.</div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h4 style="margin-bottom:6px">Bài thơ (phiên âm Hán Việt)</h4>
+        <div class="poem">
+          Tẩu biến cao sơn dữ tuấn nham,<br>
+          Na tri bình lộ cánh nan kham.<br>
+          Cao sơn lộ hổ chung vô dạng,<br>
+          Bình lộ phùng nhân khước bị giam.<br><br>
+          Dư nguyên đại biểu Việt Nam dân,<br>
+          Nghĩ đáo Trung Hoa kiến yếu nhân.<br>
+          Vô nại phong ba bình địa khởi,<br>
+          Tống dư nhập ngụ tác gia tân.<br><br>
+          Trung thành ngã bản vô tâm cứu,<br>
+          Khước bị hiềm nghi tố Hán gian.<br>
+          Xử thế nguyên lai phi dị dị,<br>
+          Nhi kim xử thế cánh nan nan.
+        </div>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:6px">Dịch nghĩa (bản dịch của mình)</h4>
+        <div class="poem" style="font-family:inherit;font-size:15px">
+          Trèo khắp non cao và đường hiểm,<br>
+          Ngờ đâu đường bằng lại khó đi.<br>
+          Núi cao có hổ mà chẳng việc gì,<br>
+          Đường bằng gặp người lại bị giam!<br><br>
+          Ta là đại biểu của dân Việt Nam,<br>
+          Định sang Trung Hoa gặp người quan trọng.<br>
+          Bất ngờ sóng gió từ đất bằng nổi lên,<br>
+          Đưa ta vào ở làm khách mới trong ngục.<br><br>
+          Lòng ta ngay thẳng, không điều gì phải hổ thẹn,<br>
+          Vậy mà bị nghi là Hán gian.<br>
+          Ở đời xưa nay vốn không dễ,<br>
+          Nay ở đời còn khó gấp bội.
+        </div>
+      </div>
+    </div>
+
+    <div class="lh" style="margin-top:20px"><b>1</b><span>Bố cục ba phần</span></div>
+    <div class="grid3">
+      <div class="card">
+        <h4>Phần I · Đường đời hiểm trở</h4>
+        <p>Hai câu đầu cho thấy việc vượt núi cao, đèo hiểm là chuyện đã quen. Nhưng câu thứ hai đảo lại: điều bất ngờ không nằm ở thiên nhiên mà nằm ở đường bằng phẳng. Hai câu sau đặt hổ dữ đối với con người, và kết quả là hổ không làm hại mà người lại giam người.</p>
+      </div>
+      <div class="card">
+        <h4>Phần II · Hoàn cảnh bị bắt</h4>
+        <p>Tác giả tự nhận là đại biểu dân Việt Nam, đến Trung Hoa để gặp nhân vật quan trọng. Câu “phong ba bình địa khởi” nói sóng gió nổi lên từ đất bằng, tức là tai họa đến bất ngờ và vô lý. Hai chữ “khách mới” ở cuối phần này mang sắc thái mỉa mai, vì nơi giam giữ lại được gọi như chốn tiếp khách.</p>
+      </div>
+      <div class="card">
+        <h4>Phần III · Lòng ngay bị nghi</h4>
+        <p>Tác giả khẳng định lòng mình trong sạch, không có điều gì phải chuộc, nhưng vẫn bị nghi là Hán gian. Hai câu cuối lặp chữ “dị dị” (dễ dễ) rồi “nan nan” (khó khó) để nhấn mạnh rằng sống giữa thời loạn càng về sau càng khó. Đây là phần đúc kết cảm xúc của cả bài.</p>
+      </div>
+    </div>
+
+    <div class="lh" style="margin-top:20px"><b>2</b><span>Biện pháp nghệ thuật</span></div>
+    <div class="chips" style="margin-bottom:12px">
+      <span>đối lập: núi cao / đường bằng</span>
+      <span>nghịch lý: đường bằng lại hiểm</span>
+      <span>đối: hổ / người</span>
+      <span>ẩn dụ: “đường đời”</span>
+      <span>điệp: “dị dị” – “nan nan”</span>
+      <span>mỉa mai: “khách mới”</span>
+    </div>
+    <div class="card">
+      <p>Bài thơ đi từ hình ảnh thiên nhiên sang hình ảnh con người. Câu “Cao sơn lộ hổ chung vô dạng” và “Bình lộ phùng nhân khước bị giam” là cặp đối trung tâm, khiến người đọc tin rằng nguy hiểm thật sự nằm ở xã hội. Khi lặp chữ “dị dị” và “nan nan”, tác giả không chỉ kể chuyện mà còn để nhịp thơ tự nói lên cảm giác ngày càng khó khăn.</p>
+    </div>
+
+    <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Bài thơ đi từ <b>nghịch lý</b> (đường phẳng lại hiểm) đến <b>tự bạch</b> (lòng ngay bị nghi) và kết lại bằng <b>điệp từ</b> (dễ dễ, khó khó). Khi làm bài, hãy nêu được cả ba phần và chỉ ra ít nhất hai biện pháp.</p></div>
+  </div>
+</section>
+
+<style>
+.route{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 20px}
+.route span{background:#fff;border:1.5px solid #E6DED0;border-radius:999px;padding:6px 12px;font-size:14px;color:#24304F}
+.route i{font-style:normal;color:#D9533B;font-weight:700}
+.pc{cursor:pointer;transition:transform .15s,box-shadow .15s}
+.pc:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(36,48,79,.12)}
+.pc .ic{font-size:34px;line-height:1;margin-bottom:6px}
+.pc .tag{display:inline-block;margin-top:8px;font-size:12px;background:#F2B94B;color:#24304F;border-radius:999px;padding:2px 10px;font-weight:700}
+.mdl{position:fixed;inset:0;background:rgba(36,48,79,.45);display:none;align-items:center;justify-content:center;padding:18px;z-index:99}
+.mdl.on{display:flex}
+.mbox{background:#FFFAF2;max-width:640px;width:100%;max-height:88vh;overflow:auto;border-radius:18px;padding:22px 22px 26px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.mx{position:absolute;top:8px;right:12px;border:0;background:none;font-size:30px;cursor:pointer;color:#24304F;line-height:1}
+.mh{display:flex;gap:14px;align-items:center;padding-right:24px}
+.mh .ic{font-size:46px;line-height:1}
+.mh h3{margin:2px 0 0;font-size:24px}
+.mlab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#1E8C6E;font-weight:700;margin-top:16px}
+.mpoem{background:#fff;border-radius:12px;padding:12px 16px;font-family:'Noto Serif',serif;font-size:16px;line-height:1.75;margin:6px 0 0;color:#24304F}
+.mpoem.vi{font-family:inherit;font-size:15px}
+.mchips span{display:inline-block;background:#E7F4EF;color:#1E8C6E;border-radius:999px;padding:4px 10px;margin:4px 4px 0 0;font-size:13px}
+.mgt{font-size:15px;line-height:1.75;margin:6px 0 0;color:#24304F}
+.mgo{margin-top:18px;background:#1E8C6E;color:#fff;border:0;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:15px}
+</style>
+
+<section class="sec" id="tra-cuu">
+  <div class="kicker">Phần 3 · Tra cứu</div>
+  <h2>Các bài còn lại trong tập</h2>
+  <div class="bar"></div>
+  <p>Mỗi bài là một thẻ có biểu tượng. Bấm vào thẻ để xem bài thơ, bản dịch, biện pháp và giải thích.</p>
+
+  <div class="route">
+    <span>🚔 Túc Vinh</span><i>→</i>
+    <span>🏯 Tĩnh Tây</span><i>→</i>
+    <span>🛶 Long An</span><i>→</i>
+    <span>🌾 Đồng Chính</span><i>→</i>
+    <span>🏙️ Nam Ninh</span>
+  </div>
+
+  <div class="fbar">
+    <button class="fbtn on" data-g="all">Tất cả</button>
+    <button class="fbtn" data-g="Hành trình">Hành trình</button>
+    <button class="fbtn" data-g="Đời sống tù">Đời sống tù</button>
+    <button class="fbtn" data-g="Tình người">Tình người</button>
+    <button class="fbtn" data-g="Thiên nhiên &amp; tâm hồn">Thiên nhiên &amp; tâm hồn</button>
+    <button class="fbtn" data-g="Xã hội &amp; thời cuộc">Xã hội &amp; thời cuộc</button>
+    <button class="fbtn" data-g="Tư tưởng &amp; nghệ thuật">Tư tưởng &amp; nghệ thuật</button>
+    <input id="q" type="search" placeholder="Gõ từ khoá: cơm, trăng, gà, chân…">
+  </div>
+  <p style="font-size:14px;color:var(--muted)">Đang hiển thị <b id="count">58</b> mục.</p>
+
+  <div class="pgrid" id="grid"></div>
+
+  <div class="mdl" id="mdl" aria-hidden="true">
+    <div class="mbox" role="dialog" aria-modal="true">
+      <button class="mx" id="mx" aria-label="Đóng">×</button>
+      <div id="mbody"></div>
+    </div>
+  </div>
+<script>
+var ENTRIES=[
+{id:1,n:"Bài 1",t:"Thân thể – Tinh thần",g:"Tư tưởng & nghệ thuật",ic:"⛓️",tom:"Thân ở trong ngục nhưng tinh thần vẫn vượt ra ngoài song sắt.",han:["Thân thể tại ngục trung,","Tinh thần tại ngục ngoại;","Dục thành đại sự nghiệp,","Tinh thần cánh yếu đại."],vi:["Thân ở trong tù,","Lòng vẫn vượt ra ngoài tường;","Muốn làm nên nghiệp lớn,","Lòng càng phải mạnh, cao hơn."],bp:["đối: trong ngục / ngoài ngục","điệp cấu trúc “tinh thần”"],gt:"Bài thơ đặt hai thế giới đối nhau: thân thể bị giam còn tinh thần thì tự do, và chính sự tự do ấy giúp tác giả giữ mình. Câu cuối mang tính khuyên nhủ, muốn làm việc lớn thì tinh thần phải càng lớn hơn hoàn cảnh. Trong bản gốc, bốn câu này không có đầu đề và được coi như lời đề từ cho cả tập."},
+{id:2,n:"Bài 2",t:"Khai quyển (mở đầu tập)",g:"Tư tưởng & nghệ thuật",ic:"📜",tom:"Lời tự bạch: vốn không thích làm thơ, nhưng trong tù thì ngâm thơ để chờ ngày tự do.",han:["Lão phu nguyên bất ái ngâm thi,","Nhân vị tù trung vô sở vi.","Liêu tá ngâm thi tiêu vĩnh nhật,","Thả ngâm thả đãi tự do thì."],vi:["Vốn dĩ ta không mê làm thơ,","Chỉ vì trong tù chẳng có việc gì làm;","Nhờ ngâm thơ cho qua ngày dài,","Vừa ngâm vừa đợi ngày tự do."],bp:["tự bạch khiêm tốn","đối: ngâm thơ / đợi tự do"],gt:"Bài mở đầu tập là lời tự bạch khiêm tốn, tác giả nói mình không ưa làm thơ. Lý do ngâm thơ nằm ở hoàn cảnh, vì thơ là cách làm cho thời gian trong ngục trôi qua. Câu cuối cho thấy điều tác giả thật sự mong chờ là ngày tự do, nên mỗi bài thơ trong tập đều mang chút hy vọng."},
+{id:3,n:"Bài 3",t:"Bị bắt giữ ở phố Túc Vinh",g:"Hành trình",ic:"🚔",tom:"Bị bắt ở phố Túc Vinh; tác giả chơi chữ để châm biếm sự bắt bớ vô lý.",han:["Túc Vinh khước sử dư mông nhục,","Cố ý trì diên ngã khứ trình;","Gián điệp hiềm nghi không niết tạo,","Bả nhân danh dự bạch hy sinh."],vi:["Phố Túc Vinh lại khiến ta chịu nhục,","Cố tình làm chậm bước đường ta;","Bày ra chuyện nghi là gián điệp,","Vô cớ làm tổn hại thanh danh người."],bp:["chơi chữ: “túc vinh” đối “mông nhục”","mỉa mai","châm biếm bộ máy bắt bớ"],gt:"Tên phố Túc Vinh nghĩa là đủ vinh, nhưng ở đây lại gắn với nỗi nhục bị bắt. Tác giả đặt “mông nhục” (chịu nhục) đối với “túc vinh” (đủ vinh) để biến cái tên phố thành một câu chuyện trớ trêu. Cách dùng chữ này khiến sự vô lý của việc bắt người hiện ra rõ hơn cả lời than trực tiếp.",tab:""},
+{id:4,n:"Bài 4",t:"Vào nhà ngục huyện Tĩnh Tây",g:"Hành trình",ic:"🏯",tom:"Mây tạnh mây bay đi hết, chỉ còn người “tự do” ở lại trong ngục.",han:["Ngục trung cựu phạm nghênh tân phạm,","Thiên thượng tình vân trục vũ vân.","Tình vũ phù vân phi khứ liễu,","Ngục trung lưu trú tự do nhân."],vi:["Tù cũ đón tù mới vào ngục,","Trên trời mây tạnh đuổi mây mưa;","Tạnh, mưa, mây trôi đi hết,","Chỉ còn người “tự do” ở lại trong tù."],bp:["đối: mây đi / người ở lại","nghịch lý: “tự do” mà vẫn ở ngục","ẩn dụ: mây = tự do"],gt:"Hình ảnh mây tạnh, mưa tan, mây bay đi hết là cảnh tự nhiên và thoải mái. Trái lại, người tù phải ở lại trong ngục, và chữ “tự do” đặt ở cuối bài mang nghịch lý. Từ đó có thể thấy tự do của tác giả nằm ở tinh thần chứ không ở thân xác."},
+{id:5,n:"Bài 5–7",t:"Đi đường (Thế lộ nan)",g:"Hành trình",ic:"🏔️",tom:"Đường đời hiểm trở: núi cao có hổ mà vẫn yên, đường bằng gặp người lại bị giam.",han:["Tẩu biến cao sơn dữ tuấn nham,","Na tri bình lộ cánh nan kham.","Cao sơn lộ hổ chung vô dạng,","Bình lộ phùng nhân khước bị giam."],vi:["Trèo khắp non cao và đường hiểm,","Ngờ đâu đường bằng lại khó đi.","Núi cao có hổ mà chẳng việc gì,","Đường bằng gặp người lại bị giam!"],bp:["đối: núi cao / đường phẳng","nghịch lý: đường phẳng lại hiểm","hổ ~ người: bất ngờ"],gt:"Bài thơ dựa trên nghịch lý: người ta đề phòng núi cao và hổ dữ, còn đường bằng thì lại gặp người gây hại. Chữ bình lộ mang nghĩa bóng là con đường đời thường, nơi hiểm họa đến từ con người chứ không từ thiên nhiên. Đây là nền để các bài sau kể về việc tác giả bị bắt.",tab:"p-dicuong"},
+{id:6,n:"Bài 8–9",t:"Buổi sớm (Tảo)",g:"Thiên nhiên & tâm hồn",ic:"🌅",tom:"Mặt trời đã lên, cửa lao chưa mở; ánh sáng hy vọng đến trước cả khi ngục sáng.",han:["Thái dương mỗi tảo tòng tường thượng,","Chiếu trước lung môn môn vị khai.","Lung lý hiện thời hoàn hắc ám,","Quang minh khước dĩ diện tiền lai.","","Tảo khởi nhân nhân tranh liệp sắt,","Bát chung hưởng liễu tảo xan khai.","Khuyến quân thả ngật nhất cá bão,","Bĩ cực chi thì tất thái lai."],vi:["Mỗi sáng mặt trời lên khỏi đầu tường,","Chiếu tới cửa lao mà cửa vẫn đóng;","Trong ngục lúc này còn tối đen,","Ánh sáng đã đến ngay trước mặt.","","Sáng dậy, ai nấy đua nhau bắt rận,","Chuông điểm tám tiếng, bữa sáng bắt đầu;","Khuyên anh cứ ăn cho no bụng,","Hết bĩ tắc ắt sẽ đến thái bình."],bp:["ẩn dụ: mặt trời = hy vọng","đối: tối / sáng","điển: “bĩ cực thái lai” (Kinh Dịch)"],gt:"Mặt trời đã lên nhưng cửa lao còn đóng, nên trong ngục vẫn tối. Tác giả lại nói ánh sáng đã đến trước mặt, một cách nói ẩn dụ rằng hy vọng đã xuất hiện trước khi hiện thực thay đổi. Thành ngữ “bĩ cực thái lai” lấy từ Kinh Dịch, nghĩa là khi khó khăn lên đến cùng cực thì điều tốt đẹp sẽ đến."},
+{id:7,n:"Bài 11",t:"Lời hỏi (Vấn thoại)",g:"Xã hội & thời cuộc",ic:"⚖️",tom:"Cuộc đối đáp giữa quan toà và phạm nhân, phơi bày sự giả dối của công lý.",han:["Xã hội đích lưỡng cực,","Pháp quan dữ phạm nhân;","Quan viết: Nhĩ hữu tội,","Phạm viết: Ngã lương dân;","Quan viết: Nhĩ thuyết giả,","Phạm viết: Ngã ngôn chân;","Pháp quan tính bản thiện,","Giả trang ác ngân ngân;","Yếu nhập nhân ư tội,","Khước giả ý ân cần;","Giá lưỡng cực chi gian,","Lập trước công lý thần."],vi:["Hai cực trong xã hội:","Quan toà và người bị giam.","Quan rằng: anh có tội,","Người đáp: tôi là dân lương thiện.","Quan rằng: anh nói dối,","Người đáp: lời tôi thật trăm phần.","Quan vốn tính hiền lành,","Cố làm bộ dữ dằn,","Muốn đẩy người vào vòng tội,","Lại tỏ vẻ ân cần;","Ở giữa hai cực ấy,","Công lý đứng làm thần."],bp:["đối thoại: quan / phạm","điệp “rằng / đáp”","châm biếm: “tính thiện” mà “giả ác”","mỉa mai: “công lý đứng làm thần”"],gt:"Bài thơ dựng một cuộc đối đáp ngắn giữa hai nhân vật có quyền lực khác nhau. Quan toà khăng khăng buộc tội, phạm nhân khẳng định mình lương thiện, và sự đối lập ấy làm lộ ra sự vô lý của pháp luật. Câu kết cho thấy công lý thật sự không nằm ở toà án mà ở một đấng vô hình, nên lời châm biếm rất sâu."},
+{id:8,n:"Bài 12",t:"Quá trưa (Ngọ hậu)",g:"Đời sống tù",ic:"🌤️",tom:"Hai giờ chiều cửa ngục mở, người tù ngẩng nhìn trời và tự hỏi trong ngục có tiên không.",han:["Nhị điểm khai lung hoán không khí,","Nhân nhân ngưỡng khán tự do thiên;","Tự do thiên thượng thần tiên khách,","Tri phủ lung trung dã hữu tiên?"],vi:["Hai giờ chiều cửa ngục mở để đổi không khí,","Ai nấy ngẩng lên nhìn trời tự do;","Khách tiên trên bầu trời rộng kia,","Biết đâu trong ngục cũng có tiên chăng?"],bp:["câu hỏi tu từ","đối: ngục / trời tự do","ẩn dụ: “tiên” = người có tinh thần tự do"],gt:"Cửa ngục mở để thay không khí là một khoảnh khắc nhỏ, nhưng tác giả nhìn thấy bầu trời như miền tự do. Câu hỏi cuối là câu hỏi tu từ, không cần đáp án, chỉ nhắc rằng tinh thần con người vẫn cao quý ngay trong tù. Hình ảnh tiên mang vẻ hài hước và tự hào."},
+{id:9,n:"Bài 13",t:"Chiều hôm (Vãn)",g:"Tư tưởng & nghệ thuật",ic:"🎵",tom:"Chiều xuống, tiếng hát và tiếng nhạc vang lên; nhà ngục tối bỗng như viện nghệ thuật.",han:["Vãn xan ngật liễu, nhật tây trầm,","Xứ xứ sơn ca, dữ nhạc âm;","U ám Tĩnh Tây cấm bế thất,","Hốt thành mỹ thuật tiểu hàn lâm."],vi:["Cơm chiều xong, mặt trời lặn về tây,","Khắp nơi vang tiếng hát và tiếng nhạc;","Nhà ngục Tĩnh Tây vốn tối tăm,","Bỗng hoá thành một viện nghệ thuật nhỏ."],bp:["nghịch lý: ngục → viện nghệ thuật","đối: u ám / rộn ràng","tự trào, hài hước"],gt:"Trong ngục tối, tiếng hát và tiếng nhạc từ các phòng giam làm không khí bỗng sống động. Tác giả gọi nơi ấy là viện nghệ thuật, một cách nói ngược đầy hài hước. Nghịch lý này cho thấy sức sống của con người có thể biến chỗ tù túng thành nơi nghệ thuật."},
+{id:10,n:"Bài 14",t:"Cơm tù",g:"Đời sống tù",ic:"🍚",tom:"Bữa cơm chỉ có gạo đỏ, không muối không canh; ai có người đưa cơm thì no, ai không thì đói.",han:["Mỗi xan nhất uyển hồng mễ phạn,","Vô diêm, vô thái, hựu vô thang;","Hữu nhân tống phạn, ngật đắc bão,","Vô nhân tống phạn, hán gia lương."],vi:["Mỗi bữa một bát cơm gạo đỏ,","Không muối, không rau, cũng không canh;","Có người đem cơm thì được no,","Không ai đem cơm thì đói meo, kêu trời."],bp:["tả thực cụ thể","đối: có người / không người","điệp “không”"],gt:"Bài thơ kể bữa ăn nghèo nàn bằng giọng bình thản: không muối, không rau, không canh. Sự khác biệt ở câu cuối giữa người có người đưa cơm và người không có ai là chi tiết về tình người trong tù. Lối tả thực và nỗi thiếu thốn được kể nhẹ nhàng nhưng người đọc vẫn thấy xót xa."},
+{id:11,n:"Bài 15",t:"Người bạn tù thổi sáo",g:"Tình người",ic:"🎶",tom:"Tiếng sáo nhớ quê của bạn tù gợi nỗi nhớ, khiến tác giả nghĩ đến người vợ ngóng trông.",han:["Ngục trung hốt thính tư hương khúc,","Thanh chuyển thê lương điệu chuyển sầu;","Thiên lý quan hà vô hạn cảm,","Khuê nhân cánh thướng nhất tằng lâu."],vi:["Trong ngục bỗng nghe khúc nhớ quê,","Tiếng sáo thê lương, điệu càng sầu;","Ngàn dặm quan hà, lòng xúc động vô hạn,","Người nơi khuê phòng lại bước lên lầu."],bp:["điển: “khuê nhân” (người phòng khuê)","ẩn dụ âm nhạc","đối: trong ngục / ngàn dặm"],gt:"Tiếng sáo nhớ quê vang lên trong ngục, đưa tâm trí tác giả về quê nhà xa xôi. Hình ảnh người khuê phòng bước lên lầu ngóng chồng là điển cổ quen thuộc của thơ xưa, khiến nỗi nhớ không chỉ của một người mà của cả những người xa nhà. Âm nhạc ở đây là cầu nối giữa những con người bị giam riêng rẽ."},
+{id:12,n:"Bài 16–17",t:"Cướp áp và Cái cùm",g:"Đời sống tù",ic:"🔗",tom:"Chiếc cùm như hung thần nuốt chân người; nghịch lý là người tù tranh nhau đi cùm để được ngủ.",han:["Tranh ninh ngã khẩu tự hung thần,","Vãn vãn trương khai bả cước thôn;","Các nhân bị thôn liễu hữu cước,","Chỉ thặng tả cước năng khuất thân.","","Miệng đói dữ tượn như một hung thần,","Đêm đêm há hốc nuốt chân người;","Người nào cũng bị nuốt chân phải,","Chỉ còn chân trái co duỗi được thôi."],vi:["Như ác thần há miệng ngoạm vào,","Đêm đêm ngoạm chân người;","Ai cũng mất một chân phải,","Chỉ còn chân trái co duỗi thôi.","","Đời lạ lùng thay,","Người ta tranh nhau xin đi cùm,","Có cùm mới được ngủ,","Không cùm thì chẳng yên giấc nằm."],bp:["nhân hoá: cùm như hung thần","điệp “nuốt chân”","nghịch lý: tranh nhau đi cùm","mỉa mai đời tù"],gt:"Chiếc cùm được hình dung như hung thần há miệng nuốt chân người, vừa rùng rợn vừa có chút hài hước. Tác giả lặp lại “nuốt chân” để nhấn mạnh sự tàn bạo, rồi đến phần sau kể nghịch lý người tù tranh nhau đi cùm vì có cùm mới được ngủ yên. Sự đảo ngược ấy cho thấy đời tù đã làm lệch cả lẽ thường."},
+{id:13,n:"Bài 18–20",t:"Học đánh cờ (Học dịch kỳ)",g:"Tư tưởng & nghệ thuật",ic:"♟️",tom:"Trong tù tập đánh cờ như một cuộc chiến: thắng lợi thuộc về người tính xa và chắc tay.",han:["Bế tọa vô liêu học dịch kỳ,","Thiên binh vạn mã cộng khu trì;","Tấn công thoái thủ ưng thần tốc,","Cao tài tật túc tiên đắc chi."],vi:["Ngồi buồn trong ngục, tập đánh cờ,","Nghìn quân muôn ngựa cùng xông pha;","Tiến công, lui giữ đều cần nhanh,","Tài cao, bước lẹ, ắt được trước."],bp:["ẩn dụ: cờ = chiến tranh","so sánh: “thiên binh vạn mã”","điệp “công / thủ”"],gt:"Trong tù không có việc gì làm, tác giả đem cờ ra học. Ông dùng hình ảnh quân lính và chiến trận để nói về cách đánh cờ, và qua đó bàn về cách đánh trận: tầm nhìn phải rộng, quyết tâm phải cao. Bài thơ thể hiện tinh thần lạc quan, chơi cờ để giữ cho đầu óc sắc bén."},
+{id:14,n:"Bài 21",t:"Ngắm trăng (Vọng nguyệt)",g:"Thiên nhiên & tâm hồn",ic:"🌕",tom:"Không rượu không hoa, nhưng người ngắm trăng thì trăng cũng ngắm lại người.",han:["Ngục trung vô tửu diệc vô hoa,","Đối thử lương tiêu nại nhược hà?","Nhân hướng song tiền khán minh nguyệt,","Nguyệt tòng song khích khán thi gia."],vi:["Trong tù không rượu cũng không hoa,","Trước cảnh đêm nay biết làm sao?","Người hướng ra cửa sổ ngắm trăng,","Trăng cũng qua khe cửa nhìn người làm thơ."],bp:["nhân hoá: trăng nhòm khe cửa","đảo ngữ: trăng ngắm nhà thơ","đối: người ngắm trăng / trăng ngắm người"],gt:"Bài thơ tả khoảnh khắc đẹp nhất của người tù: không rượu không hoa nhưng vẫn có trăng. Câu cuối đảo ngược quan hệ giữa người và trăng, để trăng như người nhòm qua khe cửa nhìn lại nhà thơ. Đó là sự giao hoà tinh tế giữa con người và thiên nhiên giữa chốn tù túng.",tab:"p-ngamtrang"},
+{id:15,n:"Bài 22",t:"Chia nước (Phân thuỷ)",g:"Đời sống tù",ic:"💧",tom:"Mỗi người chỉ được nửa chậu nước, nên phải chọn rửa mặt hay đun trà.",han:["Mỗi nhân phân đắc thủy bán bồn,","Tẩy diện, phanh trà các tùy tiện;","Thùy yếu tẩy diện, vật phanh trà,","Thùy yếu phanh trà, vật tẩy diện."],vi:["Mỗi người được chia nửa chậu nước,","Rửa mặt hay đun trà tùy ý;","Ai muốn rửa mặt thì đừng đun trà,","Ai muốn đun trà thì đừng rửa mặt."],bp:["đối: rửa mặt / đun trà","điệp đảo: “ai muốn…”","hài hước, sinh hoạt tù"],gt:"Nước là thứ quý trong tù nên mỗi người chỉ được nửa chậu. Bài thơ đưa ra một lựa chọn nhỏ nhưng đối xứng gọn gàng: ai muốn rửa mặt thì đừng đun trà, và ngược lại. Lối đối này vừa vui vừa cho thấy tác giả vẫn để ý đến nhịp điệu của thơ ngay trong cảnh thiếu thốn."},
+{id:16,n:"Bài 23–24",t:"Trung thu",g:"Tình người",ic:"🥮",tom:"Trăng Trung Thu tròn như gương soi khắp nhân gian; người trong ngục ngắm trăng mà lòng theo trăng đi xa.",han:["Trung thu thu nguyệt viên như kính,","Chiếu diệu nhân gian bạch tự ngân;","Gia lý đoàn viên ngật thu tiết,","Bất vong ngục lý ngật sầu nhân.","","Ngục trung nhân dẫn thưởng trùng thu,","Thu nguyệt, thu phong đới điểm sầu;","Bất đắc tự do thưởng thu nguyệt,","Tâm tùy thu nguyệt cộng du du."],vi:["Trăng Trung Thu tròn như gương,","Chiếu khắp nhân gian trắng như bạc;","Nhà ai sum họp ăn Tết,","Chẳng quên người trong ngục đang sầu.","","Người tù cũng được ngắm trăng thu,","Trăng gió thu đều vương nỗi buồn;","Không được tự do thưởng nguyệt,","Lòng cùng trăng đi vời vợi."],bp:["ẩn dụ: trăng như gương","đối: sum họp / người trong ngục","điệp chữ “thu”"],gt:"Trăng Trung Thu được ví như chiếc gương tròn chiếu sáng khắp nơi, còn nhà tù thì đặt đối diện với cảnh đoàn viên ngoài kia. Ở bài thứ hai, nỗi buồn lan vào cả gió và trăng, rồi lòng người tù đi theo trăng ra tận chân trời. Chữ thu lặp lại đều đặn làm cảm xúc càng thấm đượm."},
+{id:17,n:"Chiều tối",t:"Chiều tối (ngoài tập)",g:"Thiên nhiên & tâm hồn",ic:"🌆",tom:"Chim về rừng, mây lững thững trôi, bếp lửa đỏ sau khi xay bắp xong.",han:["Quyện điểu quy lâm tầm túc thụ,","Cô vân mạn mạn độ thiên không;","Sơn thôn thiếu nữ ma bao túc,","Bao túc ma hoàn lô dĩ hồng."],vi:["Chim mỏi về rừng tìm cây ngủ,","Đám mây lẻ loi lững thững qua trời;","Cô gái làng núi xay bắp,","Xay xong, bếp đã đỏ rực."],bp:["nhãn tự “hồng”","đối: chim–mây / bếp–lửa","tả cảnh chấm phá"],gt:"Bài thơ phác hoạ một buổi chiều bình yên: chim về tổ, mây trôi, cô gái xay bắp xong thì bếp lửa đã đỏ. Chữ hồng đứng cuối bài là nhãn tự, làm sáng cả bức tranh và cho thấy tâm hồn lạc quan của người viết giữa cảnh tù.",tab:"p-chieutoi"},
+{id:18,n:"Bài 34",t:"Điền Đông",g:"Hành trình",ic:"🥣",tom:"Cháo nhà nước mỗi bữa một bát; củi đắt như quế, gạo đắt như châu.",han:["Mỗi xan nhất uyển công gia chúc,","Đỗ tử thì thì tại thán hu;","Bạch phạn tam nguyên bất câu bão,","Tân như quế dã mễ như châu."],vi:["Mỗi bữa một bát cháo nhà nước,","Bụng đói luôn than thở;","Cơm nhạt ba đồng chẳng đủ no,","Củi đắt như quế, gạo đắt như châu."],bp:["cường điệu: củi như quế, gạo như châu","đối: đói / no","ẩn dụ giá trị"],gt:"Hai câu kết nói về sự đắt đỏ và thiếu thốn bằng cách so sánh cực đoan. Củi quý như quế, gạo quý như châu là lối cường điệu quen thuộc của thơ xưa, nhưng dùng ở đây lại thành tiếng than có chút hài hước. Bài thơ cho thấy bữa cơm còn quan trọng hơn mọi thứ trong nhà lao Điền Đông."},
+{id:19,n:"Bài 35",t:"Mới đến nhà lao Thiên Bảo",g:"Hành trình",ic:"🥾",tom:"Đi một ngày năm mươi ba dặm, áo mũ ướt hết, đêm không có chỗ ngủ.",han:["Nhật hành ngũ thập tam công lý,","Thấp tận y quan, phá tận hài;","Triệt dạ hựu vô an thụy xứ,","Xí khanh thượng toạ đãi triêu lai."],vi:["Một ngày đi năm mươi ba dặm,","Mũ áo ướt sũng, giày rách hết;","Suốt đêm không có chỗ ngủ yên,","Ngồi trên hố xí đợi trời sáng."],bp:["số liệu cụ thể","tả thực","đối: đi / ngồi đợi"],gt:"Con số năm mươi ba dặm và chuỗi việc ướt áo, rách giày được kể dồn dập, như chính nhịp của cuộc hành trình. Câu kết đưa người đọc xuống tận cảnh ngồi trên hố xí chờ bình minh, một chi tiết thô nhưng chân thật. Bài này được xem là hồi ức về chặng đi từ Tĩnh Tây đến Thiên Bảo."},
+{id:20,n:"Bài 36",t:"Báo chí hoan nghênh Uy-Kỳ",g:"Xã hội & thời cuộc",ic:"📰",tom:"Báo chí tung hô đoàn khách Mỹ, còn tác giả, cũng là đại biểu, lại bị giam: trớ trêu.",han:["Đồng thị Trung Quốc hữu,","Đồng thị yếu phó Du;","Quân vi toạ thượng khách,","Ngã vi giai hạ tù;","Đồng thị đại biểu dã,","Đãi ngộ hồ huyền thù?","Nhân tình phân lãnh nhiệt,","Tự cổ thuỷ đông lưu!"],vi:["Cùng là bạn của Trung Hoa,","Cùng đi đến Trùng Khánh;","Anh được làm khách ngồi trên,","Tôi là tù dưới bậc thềm;","Cùng là đại biểu cả,","Sao đối đãi khác xa thế?","Thói đời phân ấm lạnh,","Xưa nay nước vẫn chảy về đông!"],bp:["đối: khách trên / tù dưới","ẩn dụ “nước chảy về đông”: thói đời","châm biếm chính trị"],gt:"Hai đoàn đại biểu cùng đi một đường, nhưng một bên được tiếp đãi long trọng còn một bên bị giam. Tác giả đặt cặp đối khách trên / tù dưới và hỏi về sự đối xử khác biệt. Hình ảnh nước chảy về đông là ẩn dụ cho thói đời hướng về kẻ có quyền thế, khiến lời châm biếm càng sâu."},
+{id:21,n:"Bài 37",t:"Tự khuyên mình",g:"Tư tưởng & nghệ thuật",ic:"💪",tom:"Mùa đông khắc nghiệt rồi cũng có mùa xuân; tai ương đến để rèn luyện tinh thần.",han:["Một hữu đông tàn tiều tụy cảnh,","Tương vô xuân noãn đích huy hoàng;","Tai ương bả ngã lai đoàn luyện,","Sử ngã tinh thần cánh khẩn trương."],vi:["Không có cảnh đông tàn tiêu điều,","Thì chẳng có xuân ấm áp rực rỡ;","Tai ương đến để rèn luyện ta,","Khiến tinh thần càng thêm vững vàng."],bp:["ẩn dụ: đông = gian khổ, xuân = hy vọng","đối: tiêu điều / huy hoàng","triết lý lạc quan"],gt:"Bài thơ lấy vòng tuần hoàn của bốn mùa để nói về đời người: không có đông lạnh thì không có xuân ấm. Tác giả tự khuyên mình xem tai ương như thầy dạy, để tinh thần thêm vững vàng. Bài ngắn nhưng thể hiện rõ triết lý bền bỉ của người cách mạng."},
+{id:22,n:"Bài 38",t:"Cảnh đồng nội (Dã cảnh)",g:"Thiên nhiên & tâm hồn",ic:"🌾",tom:"Lúa đã gặt được nửa, nông dân cười tươi, tiếng hát vang khắp đồng.",han:["Ngã lai chi thì hoà thượng thanh,","Hiện tại thu thu bán di thành;","Xứ xứ nông dân nhan đới tiếu,","Điền gian sung mãn xướng ca thanh."],vi:["Khi ta đến, lúa còn xanh,","Nay vụ gặt đã xong quá nửa;","Khắp nơi nông dân cười rạng rỡ,","Đồng ruộng vang đầy tiếng hát ca."],bp:["điệp “xứ xứ”","đối: lúa xanh / vụ gặt","tả cảnh âm thanh – màu sắc"],gt:"Bài thơ mở ra cảnh đồng quê qua hai thời điểm: lúc tác giả đến lúa còn xanh, khi nhìn lại thì đã gặt được nửa. Điệp xứ xứ làm bức tranh trải rộng khắp nơi, và tiếng hát trên đồng khiến cảnh vật tràn sức sống. Với người tù nhìn từ xa, đó là niềm vui bình dị."},
+{id:23,n:"Bài 39",t:"Hàng cháo (Chúc than)",g:"Hành trình",ic:"🍵",tom:"Túp lều tranh bên đường gọi là “tửu lâu”, món ăn chỉ có cháo nguội và muối.",han:["Lộ bàng thụ ảnh lương âm hạ,","Nhất duyện mao lư thị “tửu lâu”;","Lãnh chúc, bạch diêm cung thực phổ,","Hành nhân quá thử tạm đình lưu."],vi:["Dưới bóng cây ven đường mát rượi,","Một túp lều tranh gọi là “tửu lâu”;","Món ăn chỉ có cháo nguội và muối trắng,","Khách qua đường dừng chân nghỉ tại đây."],bp:["nghịch lý: lều tranh = tửu lâu","hài hước","liệt kê món ăn đạm bạc"],gt:"Quán ven đường chỉ là túp lều tranh, nhưng tác giả gọi là tửu lâu để tự trêu mình và trêu cảnh quán. Món ăn chỉ có cháo nguội và muối trắng, vậy mà vẫn có khách dừng chân. Cách nói ngược ấy khiến bài thơ vừa vui vừa khiêm nhường, đồng thời gợi chút dân dã của đường quê."},
+{id:24,n:"Bài 40",t:"Nhà lao Quả Đức",g:"Đời sống tù",ic:"🏠",tom:"Mỗi phòng giam như một gia đình nhỏ: tự lo củi gạo, dầu muối và bếp núc.",han:["Giam phòng dã thị tiểu gia đình,","Sài, mễ, du, diêm tự kỷ doanh;","Mỗi cá lung tiền nhất cá táo,","Thành thiên chử phạn dữ điều canh."],vi:["Phòng giam cũng như một gia đình nhỏ,","Củi, gạo, dầu, muối đều tự lo;","Trước mỗi phòng là một cái bếp,","Suốt ngày nấu cơm và nấu canh."],bp:["so sánh: phòng giam = gia đình","nghịch lý: nhà tù mà như nhà","tả thực"],gt:"Tác giả so sánh phòng giam với một gia đình nhỏ, nơi mọi người tự lo củi, gạo, dầu, muối và bếp núc. Sự so sánh vừa hài hước vừa chua xót, vì gia đình ấy được dựng lên bởi hoàn cảnh bị giam giữ. Cái hay của bài là gợi tinh thần tương trợ và tự lập trong gian khổ."},
+{id:25,n:"Bài 41",t:"Sở trưởng Long An họ Lưu",g:"Xã hội & thời cuộc",ic:"👮",tom:"Viên sở trưởng được khen vì công bằng, minh bạch và giữ nhà lao sạch sẽ.",han:["Biện sự nhận chân Lưu sở trưởng,","Nhân nhân tán tụng nhĩ công bình;","Văn tiền lạp mễ đô công bố,","Can tịnh tù lung hảo vệ sinh."],vi:["Làm việc chu đáo, ông sở trưởng họ Lưu,","Ai nấy đều khen ông công bằng;","Tiền bạc, gạo thóc đều được công khai,","Nhà lao sạch sẽ, hợp vệ sinh."],bp:["tả thực","đối: công bằng / bất công (ngầm)","ngợi khen có chừng mực"],gt:"Bài thơ ghi nhận một viên quan làm việc đúng đắn: tiền gạo được công bố rõ ràng và nhà lao được giữ sạch. Đây là lời ghi nhận hiếm hoi trong tập, cho thấy tác giả biết khen khi có điều đáng khen. Chính sự công bằng nhỏ ấy làm đời tù bớt khổ."},
+{id:26,n:"Bài 42",t:"Giải đi sớm (Tảo giải)",g:"Thiên nhiên & tâm hồn",ic:"🌄",tom:"Gà gáy trong đêm, người đi sớm dưới gió thu; khi trời hừng sáng, hơi ấm và thi hứng tràn về.",han:["Nhất thứ kê đề dạ vị lan,","Quần tinh ủng nguyệt thướng thu san;","Chinh nhân dĩ tại chinh đồ thượng,","Nghênh diện thu phong trận trận hàn.","","Đông phương bạch sắc dĩ thành hồng,","U ám tàn dư nhất tảo không;","Noãn khí bao la toàn vũ trụ,","Hành nhân thi hứng hốt gia nồng."],vi:["Gà gáy một tiếng, đêm chưa tàn,","Sao vây quanh trăng trên đỉnh núi thu;","Người đi đã lên đường xa,","Gió thu thổi vào mặt, từng cơn lạnh.","","Phương đông từ trắng chuyển sang hồng,","Bóng tối còn sót lại bỗng tan hết;","Hơi ấm lan khắp đất trời,","Người đi bỗng thấy thi hứng dâng đầy."],bp:["đối: đêm lạnh / ấm sáng","chuyển sắc: trắng → hồng","ẩn dụ bình minh = hy vọng"],gt:"Bài thơ tả chuyến đi lúc tờ mờ sáng, khi gió thu còn lạnh và sao còn treo trên núi. Sắc phương đông chuyển từ trắng sang hồng, báo hiệu bóng tối đã tan, và hơi ấm lan khắp đất trời. Sự chuyển từ lạnh sang ấm làm người đi đường bỗng thấy thi hứng dâng lên."},
+{id:27,n:"Bài 43",t:"Đồng Chính",g:"Hành trình",ic:"🏛️",tom:"Nhà lao Đồng Chính giống Bình Mã: bụng đói vì cháo loãng, nhưng nước và ánh sáng đủ đầy.",han:["Đồng Chính chính đồng Bình Mã ngục,","Mỗi xan nhất chúc đỗ không không;","Thuỷ hoà quang tuyến hẩn sung túc,","Nhật nhật hoàn khai lưỡng thứ lung."],vi:["Nhà lao Đồng Chính giống hệt nhà lao Bình Mã,","Mỗi bữa một bát cháo, bụng luôn trống rỗng;","Nước và ánh sáng thì đầy đủ,","Mỗi ngày còn mở cửa lao hai lần."],bp:["so sánh","đối: đói / đủ (nước, ánh sáng)","tự trào nhẹ"],gt:"Bài thơ mở đầu bằng so sánh hai nhà lao để người đọc hiểu rằng nơi nào cũng giống nhau. Cái đói được nói thẳng qua bát cháo, còn nước, ánh sáng và hai lần mở cửa lại được ghi nhận như điểm đáng nhắc. Cách kể vừa thực tế vừa có chút dí dỏm."},
+{id:28,n:"Bài 44",t:"Chiếc chăn giấy của người bạn tù",g:"Tình người",ic:"🧣",tom:"Chăn giấy làm từ sách cũ vở mới vẫn ấm hơn không chăn; còn bao người trong ngục không ngủ được?",han:["Cựu quyển, tân thư tương bổ xuyết,","Chỉ chiên do noãn quá vô chiên;","Ngọc sàng cẩm trướng nhân tri phủ,","Ngục lý hứa đa nhân bất miên?"],vi:["Sách cũ, vở mới cùng bồi lại,","Chăn giấy còn ấm hơn không có chăn;","Giường ngọc, màn gấm ai có biết,","Trong ngục bao người không ngủ được?"],bp:["nghịch lý: chăn giấy vẫn ấm","đối: giường ngọc / ngục","câu hỏi tu từ"],gt:"Chăn giấy là vật bình dị người bạn tù tự làm từ sách cũ và vở mới, và nó vẫn ấm hơn việc không có gì đắp. Hai câu sau đặt đối với giường ngọc, màn gấm của kẻ quyền thế để hỏi họ có biết bao người trong ngục không ngủ được hay không. Câu hỏi tu từ ấy làm nổi bật lòng biết ơn và sự thờ ơ của người có quyền."},
+{id:29,n:"Bài 45",t:"Đêm lạnh",g:"Thiên nhiên & tâm hồn",ic:"❄️",tom:"Đêm thu không đệm không chăn, co quắp người; trăng soi khóm chuối càng thấy lạnh.",han:["Thu thâm vô nhục diệc vô chiên,","Súc hình cung yêu bất khả miên;","Nguyệt chiếu đình tiêu tăng lãnh khí,","Khuy song Bắc Đẩu dĩ hoành thiên."],vi:["Đêm cuối thu không đệm cũng không chăn,","Co quắp người, cong lưng, không ngủ nổi;","Trăng soi khóm chuối càng thêm lạnh,","Qua cửa sổ thấy Bắc Đẩu đã ngang trời."],bp:["tả thực","hình ảnh: trăng lạnh, Bắc Đẩu ngang trời (thời gian)","đối: ấm / lạnh"],gt:"Bài thơ mở bằng cảnh thiếu thốn: không đệm, không chăn, phải co người nằm mà vẫn không ngủ được. Trăng soi khóm chuối làm cái lạnh như tăng thêm, và sao Bắc Đẩu ngang trời cho thấy đêm đã khuya lắm. Người đọc cảm được cả cái lạnh của thân xác lẫn sự trằn trọc của tâm hồn."},
+{id:30,n:"Bài 46",t:"Dây trói",g:"Đời sống tù",ic:"🪢",tom:"Sợi dây trói được ví như rồng dài, như tua đai quan võ, nhưng thực ra chỉ là dây gai.",han:["Hỉnh tý trường long hoàn nhiễu trước,","Uyển như ngoại quốc vũ huân quan;","Huân quan đích thị kim ti tuyến,","Ngã đích ma thằng nhất đại đoan."],vi:["Dây dài như rồng quấn quanh chân tay,","Trông như tua đai của quan võ nước ngoài;","Tua đai quan võ là kim tuyến,","Còn tua của ta chỉ là cuộn dây gai."],bp:["hài hước, tự trào","so sánh: rồng / tua quan võ","đối: kim tuyến / dây gai"],gt:"Tác giả đổi cách nhìn: sợi dây trói được ví như con rồng quấn quanh tay chân, rồi lại như tua đai quan võ nước ngoài. Đến câu cuối sự thật được nói ra: đó chỉ là một cuộn dây gai thô, đối lập với kim tuyến lộng lẫy. Chính sự chuyển từ hoa mỹ sang thô ráp là cách tác giả cười nhẹ vào cảnh ngộ của mình."},
+{id:31,n:"Bài 47",t:"Rụng mất một chiếc răng",g:"Tình người",ic:"🦷",tom:"Chiếc răng cứng cỏi đã rụng, không mềm dẻo như chiếc lưỡi; xưa cùng chia ngọt bùi, nay đôi ngả.",han:["Nhĩ đích tâm tình ngạnh thả cương,","Bất như lão thiệt nhuyễn nhi trường;","Tòng lai dữ nhĩ đồng cam khổ,","Hiện tại đông tây các nhất phương."],vi:["Tính anh rắn rỏi và kiên cường,","Không như cái lưỡi mềm và dẻo;","Xưa nay cùng anh chia ngọt bùi,","Nay đôi ngả, mỗi người một phương."],bp:["ẩn dụ: răng và lưỡi = hai kiểu người","đối: cứng / mềm","hài hước, tình bạn"],gt:"Bài thơ lấy chuyện mất răng để nói về một người bạn cứng cỏi đã phải xa cách tác giả. Răng và lưỡi được đặt đối nhau như hai kiểu tính cách, và chính sự đối lập ấy làm câu chuyện nhỏ thành lời nhớ bạn. Vui mà buồn là giọng điệu đặc trưng của bài."},
+{id:32,n:"Bài 48",t:"Long An – Đồng Chính",g:"Hành trình",ic:"🌾",tom:"Vùng đất rộng mà cằn, năm nay đại hạn; mười phần chỉ thu được vài ba phần.",han:["Thử gian thổ địa quảng nhi bần,","Sở dĩ nhân dân kiệm thả cần;","Thính thuyết kim xuân phùng đại hạn,","Thập phân thu hoạch lưỡng tam phân."],vi:["Vùng này đất rộng nhưng cằn cỗi,","Nên dân phải tiết kiệm và chăm chỉ;","Nghe nói xuân nay gặp đại hạn,","Mười phần thu hoạch chỉ còn vài ba."],bp:["đối: rộng / cằn","số liệu: mười phần / vài ba phần","nhận xét tả thực"],gt:"Bài thơ là nhận xét về cả vùng Long An và Đồng Chính, không phải tả con đường giữa hai nơi. Đất rộng nhưng cằn buộc dân phải tiết kiệm, và đại hạn làm mười phần thu hoạch chỉ còn vài ba. Qua đó người đọc thấy sự hiểu biết thực tế của tác giả về đời sống nông dân."},
+{id:33,n:"Bài 48 (bản thứ hai)",t:"Nhai thượng (Trên đường phố)",g:"Xã hội & thời cuộc",ic:"🏙️",tom:"Người ta xúm lại xem “Hán gian” trên phố; tác giả vô can nhưng vẫn thấy lòng lạnh.",han:["Nhai thượng nhân tranh khán Hán gian,","Hán gian dữ ngã bản vô can;","Vô can nhưng thị hiềm nghi phạm,","Sử ngã tâm trung giác điểm hàn."],vi:["Trên phố người ta tranh nhau xem “Hán gian”,","Mà kẻ ấy chẳng liên can gì đến ta;","Không liên can mà vẫn bị coi là người bị nghi,","Khiến lòng ta thấy lạnh đôi chút."],bp:["điệp “Hán gian”","nghịch lý: vô can mà bị nghi","đối: không liên can / bị nghi"],gt:"Bài thơ kể việc người ta tò mò xem một tên Hán gian, còn tác giả bị coi như cùng loại vì mang thân phận người tù. Lặp lại “Hán gian” và “vô can” nhấn mạnh sự oan trái. Câu kết nói về cái lạnh trong lòng, một cảm giác tinh tế của người bị nghi oan."},
+{id:34,n:"Bài 49",t:"Trên đường (Lộ thượng)",g:"Thiên nhiên & tâm hồn",ic:"🌿",tom:"Tay chân bị trói, nhưng núi rừng vẫn đầy chim hót và hương hoa, không ai cấm được niềm vui ngắm cảnh.",han:["Hĩnh tý tuy nhiên bị khẩn bang,","Mãn sơn điểu ngữ dữ hoa hương;","Tự do lãm thưởng vô nhân cấm,","Lại thử chinh đồ giảm tịch lương."],vi:["Dẫu tay chân bị trói chặt,","Đầy núi vẫn tiếng chim và hương hoa;","Thưởng ngoạn tự do, không ai cấm nổi,","Nhờ thế, đường xa bớt đi cô quạnh."],bp:["đối: trói / tự do","tả cảnh: âm thanh, hương sắc","nghịch lý tinh thần"],gt:"Dù tay chân bị trói, tác giả vẫn thấy núi rừng đầy tiếng chim và hương hoa. Hai câu sau khẳng định tự do thưởng ngoạn là điều không ai cấm được, và nhờ thế chặng đường xa cũng nhẹ đi. Bài thơ là bằng chứng cho sức mạnh tinh thần vượt lên xiềng xích."},
+{id:35,n:"Bài 50",t:"Gia quyến người bị bắt lính",g:"Xã hội & thời cuộc",ic:"👩",tom:"Chồng bị bắt lính bỏ đi; chính quyền “thương” người vợ bằng cách mời vào tù: mỉa mai.",han:["Lang quân nhất khứ bất hồi đầu,","Sử thiếp khuê trung độc bão sầu;","Đương cục khả liên dư tịch mịch,","Thỉnh dư lai tạm trú lao tù."],vi:["Chàng đi một đi không ngoảnh lại,","Để thiếp ôm sầu một mình trong buồng;","Nhà đương cục thương thiếp cô quạnh,","Nên mời thiếp vào tạm ở nhà tù."],bp:["mỉa mai: “khả liên” (đáng thương)","nghịch lý: thương mà bắt","tự sự từ vai người vợ"],gt:"Bài thơ viết như lời người vợ của người bị bắt lính, nhưng cái mỉa mai nằm ở câu cuối. Chính quyền làm như thương xót người phụ nữ cô quạnh rồi mời chị vào nhà tù ở tạm, một nghịch lý trần trụi. Dùng giọng hiền hậu để nói lời chua cay là nét đặc sắc của bài này."},
+{id:36,n:"Bài 51",t:"Pha trò (Giải trào)",g:"Tư tưởng & nghệ thuật",ic:"🎭",tom:"Ăn cơm nhà nước, ở nhà công, có lính đi theo; làm trai đến thế vẫn hào hùng.",han:["Ngật công gia phạn, trú công phòng,","Quân cảnh luân ban khứ hộ tòng;","Ngoạn thuỷ du sơn tuỳ sở thích,","Nam nhi đáo thử diệc hào hùng!"],vi:["Ăn cơm nhà nước, ở nhà công,","Lính tráng thay phiên đi hộ tống;","Chơi sông dạo núi tùy thích,","Làm trai đến thế cũng hào hùng!"],bp:["tự trào, châm biếm","điển: câu thơ của Trình Hạo","đối: nhà nước / hào hùng"],gt:"Bài thơ mượn giọng vui để nói chuyện được ăn ở đầy đủ dưới sự canh giữ. Cuối bài tác giả trích câu của Trình Hạo, nhà Nho đời Tống, rằng giàu sang không ham, nghèo hèn vẫn vui. Chữ hào hùng đặt trong hoàn cảnh bị giam tạo nên tiếng cười chua xót mà vẫn giữ được chí khí."},
+{id:37,n:"Bài 52",t:"Đi Nam Ninh (Vãng Nam Ninh)",g:"Hành trình",ic:"🚶",tom:"Xích sắt leng keng như tiếng ngọc; bị nghi làm gián điệp nhưng dáng vẫn như công khanh xưa.",han:["Thiết thằng ngạnh thế ma thằng nhuyễn,","Bộ bộ đinh đang hoãn bội thanh;","Tuy thị hiềm nghi gián điệp phạm,","Nghi dung khước tượng cựu công khanh."],vi:["Xích sắt cứng đã thay dây gai mềm,","Mỗi bước leng keng như tiếng ngọc;","Tuy là kẻ bị nghi làm gián điệp,","Dáng vẻ vẫn như vị công khanh xưa."],bp:["ẩn dụ: xích = ngọc","nghịch lý: gián điệp mà dáng công khanh","tự trào, ngạo nghễ"],gt:"Xích sắt thay cho dây gai, nhưng tiếng kêu lại được ví như tiếng ngọc, biến cái xiềng thành âm thanh đẹp. Câu sau nói người bị nghi là gián điệp mà dáng vẫn như công khanh, tạo nên sự mỉa mai và ngạo nghễ. Đó là vẻ bất khuất của người tù."},
+{id:38,n:"Bài 53–54",t:"Cảnh binh khiêng lợn đi cùng",g:"Xã hội & thời cuộc",ic:"🐖",tom:"Người bị dắt như trâu ngựa, còn lợn được khiêng: người bị coi rẻ hơn lợn vì không tự chủ.",han:["Cảnh sĩ đảm trư đồng lộ tẩu,","Trư do nhân đảm, ngã nhân khiên;","Nhân nhi phản tiện ư trư tử,","Nhân vị nhân vô tự chủ quyền!","","Thế thượng thiên tân hoà vạn khổ,","Mạc như thất khước tự do quyền!","Nhất ngôn nhất động bất tự chủ,","Như ngưu, như mã, nhậm nhân khiên."],vi:["Lính cảnh khiêng lợn cùng đi một lối,","Lợn có người khiêng, ta bị người dắt;","Người lại rẻ hơn con lợn,","Chỉ vì người không có quyền tự chủ!","","Trên đời muôn vàn cay đắng,","Chẳng gì bằng mất quyền tự do!","Một lời, một việc không tự chủ,","Như trâu, như ngựa, mặc người dắt đi."],bp:["đối: người / lợn","nghịch lý: người rẻ hơn lợn","so sánh: như trâu, như ngựa"],gt:"Cảnh người khiêng lợn cùng đường với người tù bị dắt đi khiến tác giả nhận ra một điều chua chát: con người bị coi rẻ hơn con vật vì không tự chủ được. Hai chữ như ngưu, như mã là so sánh trực tiếp và đau đớn. Phần hai nâng lên thành triết lý rằng không gì cay đắng bằng mất tự do."},
+{id:39,n:"Bài 55",t:"Hụt chân ngã (Điệt lạc)",g:"Hành trình",ic:"🕳️",tom:"Đêm tối lên đường, hụt chân xuống hố sâu; may nhảy được ra ngoài.",han:["Dạ nhưng hắc ám dĩ đăng trình,","Lộ hựu kỳ khu thậm bất bình;","Điệt nhập thâm khanh nguy hiểm thậm,","Hạnh năng dược xuất liễu thâm khanh."],vi:["Đêm còn tối mịt đã phải lên đường,","Đường lại gồ ghề, khúc khuỷu, chẳng phẳng lì;","Hụt chân rơi xuống hố sâu, nguy quá,","May nhảy được ra khỏi hố."],bp:["tả thực, nhịp gấp","ẩn dụ: hố sâu = hiểm nạn","đối: hiểm / may"],gt:"Bài thơ ghi lại một khoảnh khắc nguy hiểm: đi trong đêm tối, chân hụt xuống hố. Các động từ điệt (ngã) và dược (nhảy) tạo nhịp gấp gáp như chính cú ngã và cú nhảy. Chữ hạnh (may) ở cuối cho thấy sự nhẹ nhõm sau tai nạn, đồng thời ngầm nói đến hiểm nạn của cả hành trình."},
+{id:40,n:"Bài 56",t:"Giữa đường đáp thuyền đi Ung Ninh",g:"Hành trình",ic:"🛶",tom:"Chân bị treo như hình phạt giảo hình; hai bờ làng xóm đông vui, thuyền câu lướt nhẹ.",han:["Thừa chu thuận thuỷ vãng Ung Ninh,","Hĩnh điếu thuyền lan tự giảo hình;","Lưỡng ngạn hương thôn trù mật thậm,","Giang tâm ngư phủ điếu thuyền khinh."],vi:["Đáp thuyền xuôi dòng đi Ung Ninh,","Chân bị treo lên giàn thuyền như hình phạt treo cổ;","Hai bờ làng xóm đông đúc quá,","Thuyền câu của ông chài lướt nhẹ giữa dòng."],bp:["so sánh: treo chân như giảo hình","đối: người bị treo / thuyền nhẹ","tả cảnh sông nước"],gt:"Hình ảnh chân bị treo lên giàn thuyền được so với hình phạt giảo hình nghe rất khổ. Nhưng ngay sau đó bức tranh đổi sang làng xóm đông đúc và thuyền câu lướt nhẹ trên sông, làm nổi bật một thế giới tự do ngoài kia. Hai cảnh đặt cạnh nhau tạo sự tương phản rõ rệt."},
+{id:41,n:"Bài 57",t:"Nhà ngục Nam Ninh",g:"Đời sống tù",ic:"💡",tom:"Nhà giam hiện đại, đèn điện sáng suốt đêm, nhưng bữa ăn chỉ có cháo khiến bụng run lên.",han:["Giam phòng kiến trúc đính “ma đăng”,","Triệt dạ huy hoàng chiếu điện đăng;","Nhân vị mỗi xan duy hữu chúc,","Sử nhân đỗ tử chiến căng căng."],vi:["Nhà giam xây theo kiểu “ma đăng” (hiện đại),","Suốt đêm đèn điện sáng rực;","Vì mỗi bữa ăn chỉ có cháo,","Khiến bụng người ta run lên bần bật."],bp:["châm biếm: “ma đăng” (môđéc)","đối: đèn sáng / bụng đói","hài hước"],gt:"Tác giả dùng từ ma đăng, tức là modern, để gọi nhà lao hiện đại, một cách chế giễu khi nhà giam có đèn điện sáng rực. Nhưng câu sau đảo lại: đèn điện không nuôi được người, bữa ăn chỉ có cháo nên bụng đói run. Nghịch lý này là mũi nhọn của bài thơ."},
+{id:42,n:"Bài 58",t:"Buồn bực (Nạp buồn)",g:"Xã hội & thời cuộc",ic:"😔",tom:"Chiến tranh cháy khắp thế giới, tráng sĩ ra trận; người tù nhàn rỗi, chí lớn chẳng đáng một đồng.",han:["Hoàn cầu chiến hỏa thước thương thiên,","Tráng sĩ tương tranh phó trận tiền;","Ngục lý nhàn nhân nhàn yếu mệnh,","Hùng tâm bất trị nhất văn tiền."],vi:["Lửa chiến tranh cháy đỏ cả trời xanh,","Tráng sĩ tranh nhau ra mặt trận;","Trong ngục, người nhàn rỗi đến mức nhàn quá đỗi,","Chí lớn chẳng đáng một đồng tiền."],bp:["đối: trận tiền / trong ngục","nghịch lý: chí lớn không đáng đồng","tự trào"],gt:"Bài thơ đặt cảnh chiến tranh rực lửa toàn cầu cạnh cảnh người tù nhàn rỗi. Hai cảnh đối nhau khiến người tù thấy chí lớn của mình như vô dụng, và câu kết là lời tự trào vừa buồn vừa tỉnh táo. Tác giả không buông xuôi, chỉ thấy mình bất lực trước thời cuộc."},
+{id:43,n:"Bài 59",t:"Nghe gà gáy",g:"Xã hội & thời cuộc",ic:"🐓",tom:"Con gà thường mỗi sáng gáy báo hiệu, gọi tỉnh giấc mộng của dân chúng; công lao không nhỏ.",han:["Nhĩ chỉ bình thường nhất chích kê,","Triêu triêu báo hiểu đại thanh đề;","Nhất thanh hoán tỉnh quần lê mộng,","Nhĩ đích công lao dã bất đê."],vi:["Ngươi chỉ là một con gà thường,","Mỗi sớm cất tiếng gáy báo ngày mới;","Một tiếng gọi tỉnh giấc mộng của muôn dân,","Công lao ấy đâu có nhỏ."],bp:["ẩn dụ: gà = người báo thức","nhân hoá","đối: bình thường / công lao lớn"],gt:"Con gà bình thường được nhìn bằng con mắt trân trọng, vì tiếng gáy của nó đánh thức mọi người. Hình ảnh ấy là ẩn dụ cho những người nhỏ bé nhưng có công gọi thức quần chúng. Bài thơ ngợi ca tiếng gọi thức tỉnh."},
+{id:44,n:"Bài 60",t:"Người tù cờ bạc “chết cứng”",g:"Tình người",ic:"🎲",tom:"Người bạn tù cờ bạc chết đói: đêm qua còn nằm cạnh, sáng nay đã về suối vàng.",han:["Tha thân chỉ hữu cốt bao bì,","Thống khổ cơ hàn bất khả chi;","Tạc dạ tha nhưng thụy ngã trắc,","Kim triêu tha dĩ cửu tuyền quy."],vi:["Thân anh chỉ còn da bọc xương,","Đau khổ, đói rét không chống nổi;","Đêm qua anh còn nằm ngủ bên tôi,","Sáng nay anh đã về suối vàng."],bp:["tả thực đến xót xa","đối: đêm qua / sáng nay","điển: “cửu tuyền” (suối vàng)"],gt:"Bài thơ tả cái chết của một người bạn tù chỉ bằng vài nét: da bọc xương, khổ đau và đói rét. Sự cận kề được đặt vào hai mốc đêm và sáng, làm nổi cái chết đột ngột. Chữ cửu tuyền là điển cổ chỉ cõi chết, nên nỗi xót thương được nâng lên."},
+{id:45,n:"Bài 61",t:"Lại một người nữa…",g:"Xã hội & thời cuộc",ic:"⛰️",tom:"Bá Di, Thúc Tề không ăn thóc nhà Chu mà chết đói; người tù cờ bạc chết đói trong ngục.",han:["Di, Tề bất thực Chu triều túc,","Đổ phạm bất ngật công gia chúc;","Di, Tề ngã tử Thú Dương sơn,","Đổ phạm ngã tử công gia ngục."],vi:["Bá Di, Thúc Tề không ăn gạo nhà Chu,","Người tù cờ bạc không ăn cháo nhà nước;","Bá Di, Thúc Tề chết đói trên núi Thú Dương,","Người tù cờ bạc chết đói trong ngục nhà nước."],bp:["điển cố: Bá Di, Thúc Tề","đối: khí tiết / cái chết vô nghĩa","điệp cấu trúc"],gt:"Bài thơ mượn điển Bá Di, Thúc Tề để nói về khí tiết không chịu ăn lộc của triều đại mới. Đặt cạnh đó là người tù cờ bạc chết đói trong ngục, một cái chết không mang ý nghĩa cao quý. Sự đối chiếu ấy vừa tôn kính khí tiết, vừa xót xa cho một kiếp người bất hạnh."},
+{id:46,n:"Bài 62",t:"Cấm hút thuốc",g:"Đời sống tù",ic:"🚭",tom:"Lệnh cấm gắt gao: lính ngục hút tha hồ, còn người tù hút thì bị còng tay.",han:["Yên cấm thử gian hẩn lệ hại,","Nhĩ yên kiểu nhập tha yên bao;","Đương nhiên tha khả xuy yên đẩu,","Nhĩ nhược xuy yên, phạt thủ liêu."],vi:["Ở đây lệnh cấm hút thuốc rất gắt,","Thuốc của anh bị tịch thu bỏ vào túi nó;","Đương nhiên nó được hút bằng tẩu,","Còn anh hút thì bị còng tay."],bp:["đối: anh / nó","châm biếm","hài hước"],gt:"Bài thơ phơi bày sự bất công: thuốc của người tù bị tịch thu, còn lính ngục thì hút thoải mái. Cách xưng anh và nó làm nổi khoảng cách giữa người bị giam và kẻ canh giữ. Giọng kể nhẹ nhàng nhưng sự mỉa mai rất rõ."},
+{id:47,n:"Bài 63",t:"Nửa đêm nghe tiếng khóc chồng",g:"Tình người",ic:"😢",tom:"Nửa đêm nghe tiếng than khóc cho người chồng đã mất; người tâm đầu ý hợp biết tìm đâu.",han:["Ô hô phu quân, hề phu quân!","Hà cố phu quân cự khí trần?","Sử thiếp tòng kim hà xứ kiến,","Thập phần tâm hợp ý đầu nhân."],vi:["Than ôi, chàng ơi, chàng ơi!","Cớ sao chàng vội lìa đời?","Từ nay thiếp biết tìm đâu thấy,","Người tâm đầu ý hợp mười mươi."],bp:["điệp: “phu quân”, “chàng”","tiếng than (ô hô)","tự sự"],gt:"Bài thơ mở bằng tiếng than liên tiếp, lặp lại hai tiếng phu quân như tiếng nấc. Người khóc tiếc người bạn đời tâm đầu ý hợp, và câu hỏi cớ sao như không tin nổi cái chết ấy. Sự lặp từ làm cho bài thơ chất chứa xót xa."},
+{id:48,n:"Bài 64",t:"Hoàng hôn",g:"Thiên nhiên & tâm hồn",ic:"🌇",tom:"Gió như gươm, rét như giáo; chuông chùa giục bước khách, trẻ chăn trâu thổi sáo dẫn trâu về.",han:["Phong như lợi kiếm ma sơn thạch,","Hàn tự tiêm phong thích thụ chi;","Viễn tự chung thanh thôi khách bộ,","Mục đồng xuy địch dẫn ngưu quy."],vi:["Gió như gươm sắc mài đá núi,","Rét như mũi giáo nhọn đâm cành cây;","Tiếng chuông chùa xa giục bước khách,","Trẻ chăn trâu thổi sáo dẫn trâu về."],bp:["so sánh: gió như gươm, rét như giáo","nhân hoá: chuông giục bước","đối: lạnh gắt / sáo chiều êm"],gt:"Bài thơ có hai phần: phần đầu dùng hình ảnh gươm và giáo để tả gió và rét sắc buốt, phần sau chuyển sang âm thanh êm dịu của tiếng chuông và tiếng sáo. Sự đối lập giữa cái lạnh khắc nghiệt và tiếng sáo bình yên làm nên bức tranh chiều tà vừa đẹp vừa buồn."},
+{id:49,n:"Bài 65",t:"Tiếng công (Công kim)",g:"Đời sống tù",ic:"🧾",tom:"Nấu cơm, lấy nước sôi cũng phải trả tiền; một đồng chỉ mua được sáu hào hàng.",han:["Chử nhất oa phạn lục mao tiền,","Nhất bồn khai thuỷ ngân nhất nguyên;","Nhất nguyên mãi vật đắc lục giác,","Ngục trung giá cách định chiêu nhiên."],vi:["Nấu một nồi cơm mất sáu hào,","Mỗi chậu nước sôi một đồng;","Một đồng mua được chỉ sáu hào hàng,","Giá cả trong tù, định rõ như vậy!"],bp:["tả thực: số liệu","hài hước, mỉa mai giá cả","đối: đồng / hào"],gt:"Bài thơ kể chuyện chi phí trong tù bằng số liệu cụ thể, đến mức thành một bảng giá đầy hài hước. Tiền nấu cơm, tiền nước sôi đều phải trả, và câu kết giá cách định chiêu nhiên nói rằng mọi thứ đã rõ ràng như thế. Cách kể đời thường này phơi bày sự bóc lột nhỏ nhặt của đời tù."},
+{id:50,n:"Bài 66",t:"Không ngủ được (Thụy bất trước)",g:"Thiên nhiên & tâm hồn",ic:"🌙",tom:"Canh một, canh hai, canh ba trôi qua mà vẫn trằn trọc; đến canh năm mới chợp mắt.",han:["Nhất canh ... nhị canh... hựu tam canh,","Triển chuyển, bồi hồi, thụy bất thành;","Tứ, ngũ canh thì tài hợp nhãn,","Mộng hồn hoàn nhiễu ngũ tiêm tinh."],vi:["Canh một... canh hai... rồi canh ba,","Trằn trọc, băn khoăn, không ngủ được;","Canh bốn, canh năm mới chợp mắt,","Hồn mộng quanh quẩn cùng năm ngôi sao."],bp:["liệt kê thời gian (canh)","tượng hình: trằn trọc","ẩn dụ: sao vàng = mộng"],gt:"Bài thơ đếm từng canh để cho thấy thời gian trôi chậm trong đêm không ngủ. Người đọc theo nhịp canh một, canh hai và cảm được sự trằn trọc của người nằm. Chỉ khi canh bốn, canh năm mới chợp mắt, và giấc mộng lại đầy sao vàng, một hình ảnh đẹp giữa nỗi buồn."},
+{id:51,n:"Bài 67",t:"Nhớ bạn (Ức hữu)",g:"Tình người",ic:"🤝",tom:"Bạn tiễn ra bến sông, hẹn về lúc lúa mới; nay ruộng đã cày xong, ta vẫn ở trong ngục.",han:["Tích quân tống ngã chí giang tân,","Vấn ngã quy kỳ, chỉ cốc tân;","Hiện tại tân điền dĩ lê hảo,","Tha hương ngã tác ngục trung nhân."],vi:["Ngày xưa bạn tiễn ta ra bến sông,","Hỏi ngày về, chỉ vào lúa mới;","Nay ruộng mới đã cày bừa xong,","Đất khách, ta thành người trong ngục."],bp:["đối: ngày xưa / nay","mùa màng làm mốc thời gian","hoài niệm"],gt:"Bài thơ dùng mùa màng làm mốc thời gian: lúc tiễn nhau thì hẹn về khi lúa mới, nay ruộng đã cày xong mà người vẫn còn ở tù. Cách tính thời gian bằng việc đồng áng đem lại cảm giác gần gũi, và nỗi nhớ bạn vì thế mà thấm thía. Câu kết khiến người đọc thấy nỗi xa cách như kéo dài mãi."},
+{id:52,n:"Bài 68",t:"Viết hộ báo cáo cho các bạn tù",g:"Tình người",ic:"✍️",tom:"Viết hộ bạn bản báo cáo, học thêm mấy chữ “thừa lệnh” và được bao lời cảm ơn.",han:["Đồng chu cộng tế nghĩa nan từ,","Thế hữu biên tu báo cáo thư;","“Phụng thử”, “đẳng nhân” kim thuỷ học,","Đa đa bác đắc cảm ân từ."],vi:["Cùng hội cùng thuyền, lẽ phải giúp nhau, khó từ chối,","Viết hộ bạn bản báo cáo;","Những chữ “thừa lệnh”, “chiểu theo” nay mới học,","Mà đã được bao lời cảm ơn."],bp:["tự trào hài hước","đối: học mới / được cảm ơn","lối văn quan liêu được nhại"],gt:"Tác giả viết hộ bạn tù một bản báo cáo và tự cười mình phải học mấy chữ thừa lệnh, chiểu theo của lối văn quan. Điều đáng quý là tình nghĩa đồng cảnh: giúp nhau là lẽ đương nhiên, và được cảm ơn là niềm vui nhỏ. Bài thơ nhẹ nhàng mà ấm áp."},
+{id:53,n:"Bài 69",t:"Ghẻ lở (Lại sang)",g:"Tư tưởng & nghệ thuật",ic:"🩹",tom:"Ghẻ lở đầy người như gấm, gãi ngứa như gảy đàn; bạn tù thành “khách quý”, “tri âm”.",han:["Mãn thân hồng lục như xuyên cẩm,","Thành nhật lao tao tự cổ cầm;","Xuyên cẩm, tù trung đô quý khách,","Cổ cầm, nạn hữu tận tri âm."],vi:["Khắp người đỏ xanh như gấm dệt,","Suốt ngày sột soạt như gảy đàn;","Gấm kia, trong tù ai cũng là khách quý,","Đàn kia, bạn tù đều là tri âm."],bp:["ẩn dụ: ghẻ = gấm","so sánh: sột soạt = gảy đàn","nghịch lý: khổ thành niềm vui"],gt:"Ghẻ lở được nhìn như tấm gấm trên người và tiếng gãi ngứa như tiếng đàn, đó là lối tự trào rất đặc biệt. Khổ đau được đổi thành hình ảnh đẹp, và tình bạn tù trở thành khách quý, tri âm. Cái hay của bài là dám cười vào nỗi khổ của chính mình."},
+{id:54,n:"Bài 70 · Ôn chính",t:"Nghe tiếng giã gạo",g:"Tư tưởng & nghệ thuật",ic:"🌾",tom:"Gạo bị giã thì đau, giã xong trắng như bông; người sống cũng vậy, gian nan rèn thành ngọc.",han:["Mễ bị thung thì, hẩn thống khổ,","Ký thung chi hậu, bạch như miên;","Nhân sinh tại thế dã giá dạng,","Khốn nạn thị nhĩ ngọc thành thiên."],vi:["Gạo lúc bị giã rất đau đớn,","Giã xong rồi thì trắng như bông;","Người sống ở đời cũng vậy,","Gian nan rèn giũa thành ngọc."],bp:["ẩn dụ: gạo → người","đối: đau / trắng","ẩn dụ “ngọc thành”"],gt:"Bài thơ lấy việc giã gạo làm ẩn dụ cho đời người: hạt gạo phải qua giã mới trắng tinh, con người phải qua gian nan mới thành ngọc. Cặp đối đau đớn và trắng như bông làm nổi quy luật thử thách. Đây là bài ôn chính, chi tiết nằm ở trang Nghe tiếng giã gạo.",tab:"p-gaogao"},
+{id:55,n:"Bài 71–73",t:"Song thập nhất (Thế lộ nan ngày 11/11)",g:"Xã hội & thời cuộc",ic:"🎌",tom:"Ngày 11/11 xưa là ngày kỷ niệm đình chiến; nay năm châu đổ máu, còn Trung Hoa kháng chiến.",han:["Tòng tiền mỗi đáo Song thập nhất,","Kỷ niệm Âu châu bãi chiến kỳ;","Kim nhật ngũ châu đồng huyết chiến,","Tội khôi tựu thị ác Na-zi.","","Trung Hoa kháng chiến tương lục tải,","Liệt liệt oanh oanh cử thế tri;","Thắng lợi tuy nhiên hữu bả ác,","Nhưng tu nỗ lực phản công thì.","","Kháng Nhật tinh kỳ mãn á châu,","Tinh kỳ đại tiểu hữu sai thù;","Tinh kỳ đại đích cố tu hữu,","Tiểu đích tinh kỳ bất khả vô."],vi:["Thuở trước cứ đến ngày 11/11,","Người ta kỷ niệm đình chiến ở châu Âu;","Nay năm châu lại đổ máu,","Đầu sỏ tội ác là bọn Na-zi.","","Trung Hoa kháng chiến đã gần sáu năm,","Oanh liệt vang khắp thế giới đều biết;","Thắng lợi tuy đã nắm chắc,","Vẫn phải gắng sức lúc phản công.","","Cờ kháng Nhật phất khắp châu Á,","Cờ lớn cờ nhỏ chẳng đều nhau;","Cờ lớn cố nhiên phải có,","Cờ nhỏ cũng không thể thiếu."],bp:["đối: đình chiến / huyết chiến","điệp “cờ”","bối cảnh lịch sử"],gt:"Bài thơ mở đầu bằng ngày 11/11 vốn để kỷ niệm hoà bình, nhưng nay năm châu lại đổ máu, nên hai cảnh đối lập đau lòng. Phần sau ca ngợi kháng chiến của Trung Hoa và nói về lực lượng cùng góp sức. Đoạn cuối lặp chữ cờ để nhắc rằng cờ lớn và cờ nhỏ đều cần, mỗi người góp một phần."},
+{id:56,n:"Bài 74",t:"Cảnh báo (Báo động)",g:"Xã hội & thời cuộc",ic:"✈️",tom:"Máy bay địch kéo tới, dân chạy hết; trớ trêu là tù nhân được mở cửa và mừng rỡ.",han:["Địch cơ hạo đãng đáo thiên trung,","Tỵ tập nhân dân bào nhất không;","Ngã mẫn xuất lung tỵ không tập,","Nhân nhân hoan hỉ đắc xuất lung."],vi:["Máy bay địch rầm rộ kéo tới trên trời,","Dân chúng chạy tránh hết sạch;","Chúng tôi cũng được mở lồng tránh máy bay,","Ai nấy mừng rỡ được ra khỏi ngục."],bp:["tượng thanh “ào ào”","đối: trong ngục / ngoài","nghịch lý: nạn lại thành niềm vui"],gt:"Bài thơ tả cảnh báo động máy bay: dân chúng chạy hết, và trớ trêu thay người tù lại được mở cửa ra ngoài. Chữ ào ào gợi tiếng máy bay rầm rập và đám người chạy. Nghịch lý ấy cho thấy nỗi khổ của chiến tranh đã làm đảo ngược cảnh tù túng."},
+{id:57,n:"Bài 75",t:"Chiết tự",g:"Tư tưởng & nghệ thuật",ic:"🐉",tom:"Tách và ghép chữ Hán để tạo chữ mới: tù thành quốc, hoạn thành trung, lung thành long.",han:["Tù nhân xuất khứ hoặc vi quốc,","Hoạn quá đầu thì thuỷ kiến trung;","Nhân hữu ưu sầu ưu điểm đại,","Lung khai trúc sản, xuất chân long."],vi:["Người tù ra khỏi ngục, có thể dựng nên nước,","Qua hoạn nạn mới thấy rõ lòng trung;","Biết lo âu là ưu điểm lớn,","Nhà lao mở cửa, rồng sẽ bay ra."],bp:["chiết tự (chơi chữ)","ẩn dụ “rồng”","hai lớp nghĩa"],gt:"Bài thơ dùng lối chiết tự, tách và ghép các bộ phận chữ Hán để tạo chữ mới, như chữ tù bỏ chữ nhân để thành chữ quốc. Từ những chữ mới ấy hiện ra hai lớp nghĩa: nghĩa đen là trò chơi chữ, nghĩa bóng là người tù rồi sẽ dựng nước và rồng sẽ bay ra. Đây là sự lạc quan được gói trong một trò chơi chữ."},
+{id:58,n:"Bài 76",t:"Quán trọ (Lữ quán)",g:"Đời sống tù",ic:"🏨",tom:"Tù mới đến phải nằm cạnh hố xí; muốn ngủ ngon thì phải trả thêm tiền.",han:["Chiếu lệ sơ lai chư nạn hữu,","Tất tu thụy tại xí khanh biên;","Giả như nhĩ tưởng hảo hảo thụy,","Nhĩ yếu đa hoa kỷ khối tiền."],vi:["Theo lệ, bạn tù mới đến,","Phải ngủ sát bên hố xí;","Nếu anh muốn ngủ cho ngon giấc,","Phải bỏ thêm mấy đồng tiền."],bp:["mỉa mai","đối: ngon giấc / hố xí","ẩn dụ “quán trọ”"],gt:"Bài thơ lấy hình ảnh quán trọ để nói về nhà tù: tù mới đến phải nằm cạnh hố xí, còn muốn ngủ ngon thì phải trả thêm tiền. Tên Lữ quán nghe như chốn nghỉ chân nhẹ nhàng, nhưng thực tế là một nơi bóc lột. Lối mỉa mai ấy khiến người đọc bật cười rồi thấy đắng."},
+];
+(function(){
+  var grid=document.getElementById('grid');
+  var mdl=document.getElementById('mdl');
+  var mbody=document.getElementById('mbody');
+  function lines(arr){
+    return arr.map(function(l){return l===''?'<div style="height:8px"></div>':l;}).join('<br>');
+  }
+  function close(){ mdl.classList.remove('on'); mdl.setAttribute('aria-hidden','true'); }
+  function open(e){
+    mbody.innerHTML=
+      '<div class="mh"><div class="ic">'+e.ic+'</div><div><div class="mlab" style="margin:0">'+e.n+'</div><h3>'+e.t+'</h3></div></div>'+
+      '<p class="mgt" style="margin-top:12px">'+e.tom+'</p>'+
+      '<div class="mlab">Bài thơ (phiên âm Hán Việt)</div><div class="mpoem">'+lines(e.han)+'</div>'+
+      '<div class="mlab">Dịch nghĩa (bản dịch của mình)</div><div class="mpoem vi">'+lines(e.vi)+'</div>'+
+      '<div class="mlab">Biện pháp nghệ thuật</div><div class="mchips">'+e.bp.map(function(x){return '<span>'+x+'</span>';}).join('')+'</div>'+
+      '<div class="mlab">Giải thích</div><p class="mgt">'+e.gt+'</p>'+
+      (e.tab?'<button class="mgo" id="mgo">Xem phân tích đầy đủ →</button>':'');
+    mdl.classList.add('on'); mdl.setAttribute('aria-hidden','false');
+    var go=document.getElementById('mgo');
+    if(go){ go.addEventListener('click',function(){
+      close();
+      var btn=document.querySelector('.tbtn[data-p="'+e.tab+'"]');
+      document.getElementById('on-chinh').scrollIntoView({behavior:'smooth'});
+      if(btn) btn.click();
+    }); }
+  }
+  ENTRIES.forEach(function(e){
+    var a=document.createElement('article');
+    a.className='pc';
+    a.setAttribute('data-g',e.g);
+    a.innerHTML='<div class="ic">'+e.ic+'</div><span class="bnum">'+e.n+'</span><h3>'+e.t+'</h3><p>'+e.tom+'</p>'+(e.tab?'<span class="tag">Ôn chính</span>':'');
+    a.addEventListener('click',function(){ open(e); });
+    grid.appendChild(a);
+  });
+  document.getElementById('mx').addEventListener('click',close);
+  mdl.addEventListener('click',function(ev){ if(ev.target===mdl) close(); });
+  document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') close(); });
+})();
+</script>
+
+  <div class="note" style="margin-top:22px"><b>Ghi chú cho giáo viên:</b> file tải lên có các bài 1–24 và 34–76; không thấy bài 10 và bài 25–33. Bài <i>Chiều tối</i> được lấy từ tài liệu học riêng. Bài <i>Nghe tiếng giã gạo</i> trong file ghi là bài 70; tài liệu cũ ghi là bài 72. Bài <i>Đi đường</i> được đối chiếu với mục “Thế lộ nan” (bài 5–7) trong file; nếu bản dạy của bạn dùng bản khác, hãy kiểm tra lại. Mục tra cứu dùng bản dịch mới do mình viết; bốn bài ôn chính giữ bản dịch như trong tài liệu gốc của bạn.</div>
+</section>
+
+<section class="sec" id="nghe-thuat">
+  <div class="kicker">Phần 4 · Tổng hợp</div>
+  <h2>Các biện pháp nghệ thuật</h2>
+  <div class="bar"></div>
+  <table>
+    <tr><th style="width:24%">Biện pháp</th><th style="width:30%">Ví dụ (bài)</th><th>Tác dụng</th></tr>
+    <tr><td><b>Nhân hoá</b><br><i style="color:#2C7F8C">personification</i></td><td>“mễ… thống khổ” (Nghe tiếng giã gạo); “trăng nhòm khe cửa” (Ngắm trăng); “miệng đói… nuốt chân người” (Cái cùm); gà gọi là “ngươi” (Bài 59)</td><td>Làm vật vô tri có tình cảm; gần gũi và sinh động.</td></tr>
+    <tr><td><b>So sánh</b><br><i style="color:#2C7F8C">simile</i></td><td>“bạch như miên” (Nghe tiếng giã gạo); “củi như quế, gạo như châu” (Bài 34); “gió như gươm sắc” (Bài 64); “dây tua quan võ” (Bài 46)</td><td>Gợi hình ảnh cụ thể, làm rõ đặc điểm của sự vật.</td></tr>
+    <tr><td><b>Ẩn dụ</b><br><i style="color:#2C7F8C">metaphor</i></td><td>“ngọc thành” (Nghe tiếng giã gạo); “cô vân” (Chiều tối); “rồng” bay ra (Bài 75); “chín suối” (Bài 60)</td><td>Nói điều lớn lao qua hình ảnh nhỏ; để người đọc tự suy nghĩ.</td></tr>
+    <tr><td><b>Đối lập / tương phản</b><br><i style="color:#2C7F8C">contrast</i></td><td>không rượu – đêm đẹp (Ngắm trăng); tù – tự do (Bài 12); đau – trắng đẹp (Nghe tiếng giã gạo); khách ngồi trên – tù dưới thềm (Bài 36)</td><td>Làm nổi bật hoàn cảnh; khiến người đọc thấy rõ bất công và phẩm chất.</td></tr>
+    <tr><td><b>Điệp ngữ / điệp cấu trúc</b><br><i style="color:#2C7F8C">repetition</i></td><td>“không” (Bài 14, 45); “canh…” (Bài 66); “hỡi chàng” (Bài 63); “ma bao túc / bao túc ma” (Chiều tối)</td><td>Nhấn mạnh, tạo nhịp, gợi cảm giác lặp đi lặp lại của hoàn cảnh.</td></tr>
+    <tr><td><b>Câu hỏi tu từ</b><br><i style="color:#2C7F8C">rhetorical question</i></td><td>“Biết chăng trong tù cũng có tiên?” (Bài 12); “Trong tù bao nhiêu người không ngủ?” (Bài 44); “Đối đãi sao quá khác biệt?” (Bài 36)</td><td>Gợi suy nghĩ, bộc lộ cảm xúc; không cần đáp án.</td></tr>
+    <tr><td><b>Nghịch lý, mỉa mai</b><br><i style="color:#2C7F8C">irony</i></td><td>“khách tự do” trong tù (Bài 4); “nhà lao như tiểu gia đình” (Bài 40); “ghẻ lở như áo gấm” (Bài 69); “Pháp quan tính bản thiện” (Bài 11)</td><td>Phê phán bất công một cách kín đáo; giữ được giọng hài hước.</td></tr>
+    <tr><td><b>Chơi chữ / chiết tự</b><br><i style="color:#2C7F8C">wordplay</i></td><td>“túc vinh” – “mông nhục” (Bài 3); “tiệm rượu” (Bài 39); chiết tự (Bài 75)</td><td>Tạo tiếng cười, thể hiện sự tinh tế và tinh thần lạc quan.</td></tr>
+    <tr><td><b>Tượng thanh</b><br><i style="color:#2C7F8C">onomatopoeia</i></td><td>“vi vu” (Bài 15); “leng keng” (Bài 52); “ào ào” (Bài 74)</td><td>Tạo âm thanh trong thơ, khiến người đọc như nghe thấy.</td></tr>
+    <tr><td><b>Điển cố</b><br><i style="color:#2C7F8C">allusion</i></td><td>Bá Di, Thúc Tề (Bài 61); câu thơ Trình Hạo (Bài 51)</td><td>Mượn chuyện xưa để nói chuyện nay; làm tăng chiều sâu.</td></tr>
+    <tr><td><b>Lấy sáng tả tối / nhãn tự</b><br><i style="color:#2C7F8C">key word</i></td><td>“hồng” (Chiều tối); “ánh hồng” (Bài 9)</td><td>Ánh sáng là hi vọng và hơi ấm, xua đi cái tối của hoàn cảnh.</td></tr>
+  </table>
+
+  <div class="lh"><b>A</b><span>Mẫu câu viết phân tích (3 bước)</span></div>
+  <div class="card">
+    <p><span class="pill" style="--c:var(--khai)">Bước 1 · Gọi tên</span> Tác giả sử dụng biện pháp <b>[tên biện pháp]</b> qua từ ngữ “…”.</p>
+    <p><span class="pill" style="--c:var(--chuyen)">Bước 2 · Tác dụng</span> Biện pháp này giúp gợi tả <b>[hình ảnh]</b>, đồng thời thể hiện <b>[tâm trạng / ý nghĩa]</b>.</p>
+    <p><span class="pill" style="--c:var(--hop)">Bước 3 · Liên hệ ý nghĩa</span> Qua đó, em thấy <b>[…]</b>.</p>
+    <div class="tint-thua" style="border-radius:12px;padding:12px 14px;margin-top:10px"><i>Ví dụ:</i> Tác giả sử dụng điệp vòng “bao túc… bao túc”. Biện pháp này gợi vòng quay đều đặn của cối xay ngô, đồng thời cho thấy thời gian trôi từ chiều sang tối. Qua đó, em thấy Bác luôn quan tâm, trân trọng người lao động.</div>
+  </div>
+  <div class="card" style="margin-top:12px;border:2px dashed var(--coral)">
+    <b style="color:var(--coral)">✎ Luyện tập</b>
+    <p>Dùng mẫu 3 bước, em hãy viết 1–2 câu phân tích chữ “hồng” (nhãn tự) ở câu 4 của bài Chiều tối.</p>
+    <div class="blank"></div><div class="blank"></div>
+  </div>
+</section>
+
+<section class="sec" id="tong-ket">
+  <div class="kicker">Phần 4 · Tổng kết</div>
+  <h2>Sơ đồ ôn tập &amp; kết nối</h2>
+  <div class="bar"></div>
+
+  <div class="lh"><b>A</b><span>Sơ đồ bốn bài ôn chính</span></div>
+  <div class="flow">
+    <div class="fb" style="--c:var(--khai);background:#FDE8EF">
+      <span class="pill" style="--c:var(--ink)">Ngắm trăng</span>
+      <h4 style="margin-top:8px">Khai · Câu 1</h4><p>Không rượu, không hoa: thiếu thốn.</p>
+      <h4 style="margin-top:6px;color:var(--thua)">Thừa · Câu 2</h4><p>Đêm đẹp: rung động.</p>
+      <h4 style="margin-top:6px;color:var(--chuyen)">Chuyển · Câu 3</h4><p>Hướng ra cửa sổ.</p>
+      <h4 style="margin-top:6px;color:var(--hop)">Hợp · Câu 4</h4><p>Trăng ngắm nhà thơ.</p>
+    </div>
+    <div class="fb" style="--c:var(--thua);background:#F0EAFD">
+      <span class="pill" style="--c:var(--ink)">Chiều tối</span>
+      <h4 style="margin-top:8px">Khai · Câu 1</h4><p>Chim mỏi về rừng.</p>
+      <h4 style="margin-top:6px;color:var(--thua)">Thừa · Câu 2</h4><p>Chòm mây lẻ loi.</p>
+      <h4 style="margin-top:6px;color:var(--chuyen)">Chuyển · Câu 3</h4><p>Cô gái xóm núi xay ngô.</p>
+      <h4 style="margin-top:6px;color:var(--hop)">Hợp · Câu 4</h4><p>Lò than rực hồng.</p>
+    </div>
+    <div class="fb" style="--c:var(--chuyen);background:#E2F5EE">
+      <span class="pill" style="--c:var(--ink)">Nghe tiếng giã gạo</span>
+      <h4 style="margin-top:8px">Khai · Câu 1</h4><p>Gạo bị giã: đau đớn.</p>
+      <h4 style="margin-top:6px;color:var(--thua)">Thừa · Câu 2</h4><p>Gạo trắng như bông.</p>
+      <h4 style="margin-top:6px;color:var(--chuyen)">Chuyển · Câu 3</h4><p>Người cũng như vậy.</p>
+      <h4 style="margin-top:6px;color:var(--hop)">Hợp · Câu 4</h4><p>Gian nan thành ngọc.</p>
+    </div>
+    <div class="fb" style="--c:var(--hop);background:#E4F0FD">
+      <span class="pill" style="--c:var(--ink)">Đi đường</span>
+      <h4 style="margin-top:8px">Đang bổ sung</h4><p>Chờ bản văn để điền sơ đồ.</p>
+    </div>
+  </div>
+
+  <div class="lh"><b>B</b><span>Giá trị của các bài thơ</span></div>
+  <div class="grid2">
+    <div class="card">
+      <h4 style="margin-bottom:6px;color:var(--coral)">Nội dung</h4>
+      <ul style="margin:0;padding-left:18px">
+        <li>Tình yêu thiên nhiên, con người và tinh thần lạc quan, ý chí vững vàng của Bác.</li>
+        <li>Nhiều bài tố cáo sự bất công, đồng thời thể hiện tình người trong hoàn cảnh tù đày.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4 style="margin-bottom:6px;color:var(--teal)">Nghệ thuật</h4>
+      <ul style="margin:0;padding-left:18px">
+        <li>Thơ Đường luật ngắn gọn, nhưng hàm súc: ít chữ, nhiều ý.</li>
+        <li>Kết hợp cổ điển và hiện đại; giọng điệu đa dạng: trữ tình, châm biếm, hài hước, hào hùng.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lh"><b>C</b><span>Kết nối giữa các bài</span></div>
+  <table>
+    <tr><th style="width:24%">Tiêu chí</th><th>Ngắm trăng</th><th>Chiều tối</th><th>Nghe tiếng giã gạo</th></tr>
+    <tr><td><b>Hình ảnh</b></td><td>trăng, cửa sổ, nhà thơ</td><td>cánh chim, chòm mây, lò than</td><td>hạt gạo, chày, bông</td></tr>
+    <tr><td><b>Con người</b></td><td>người tù ngắm trăng</td><td>cô gái xóm núi xay ngô</td><td>người sống trên đời</td></tr>
+    <tr><td><b>Cảm xúc cuối bài</b></td><td>lạc quan, thi sĩ</td><td>ấm áp, lạc quan</td><td>tự tin, trưởng thành</td></tr>
+    <tr><td><b>Cách nói bài học</b></td><td>ẩn trong hình ảnh</td><td>ẩn, gợi qua ánh lửa</td><td>nói rõ ở câu 3–4</td></tr>
+  </table>
+  <div class="note" style="margin-top:12px"><b>Kết nối thêm:</b> bốn bài đều viết trong tù. Cùng là thơ Đường luật, cùng cho thấy hoàn cảnh gian khổ không khuất phục được tinh thần của Bác.</div>
+  <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Thiên nhiên (chim mỏi, mây lẻ) → con người (cô gái xay ngô) → ánh lửa hồng (ấm áp, lạc quan). Đó là hành trình cảm xúc chung của các bài ôn chính.</p></div>
+</section>
+
+<section class="sec" id="tu-kiem-tra">
+  <div class="kicker">Phần 5 · Tự kiểm tra</div>
+  <h2>Thử sức trước khi kiểm tra</h2>
+  <div class="bar"></div>
+  <p>Phần A chọn đáp án và xem giải thích ngay. Phần B trả lời bằng tiếng Việt, viết thành câu hoàn chỉnh rồi đối chiếu với mục Đáp án.</p>
+
+  <div class="lh"><b>A</b><span>Trắc nghiệm</span></div>
+
+  <div class="q"><div class="qn">1. Thể thơ của bài Ngắm trăng là?</div>
+    <div class="opts">
+      <button data-ok="0">A. Thất ngôn bát cú</button>
+      <button data-ok="1">B. Thất ngôn tứ tuyệt</button>
+      <button data-ok="0">C. Lục bát</button>
+      <button data-ok="0">D. Ngũ ngôn tứ tuyệt</button>
+    </div>
+    <div class="reveal">Đúng: thất ngôn tứ tuyệt, 4 câu × 7 chữ.</div>
+  </div>
+
+  <div class="q"><div class="qn">2. Câu “Nguyệt tòng song khích khán thi gia” dùng biện pháp nào?</div>
+    <div class="opts">
+      <button data-ok="0">A. So sánh</button>
+      <button data-ok="1">B. Nhân hoá</button>
+      <button data-ok="0">C. Điệp ngữ</button>
+      <button data-ok="0">D. Liệt kê</button>
+    </div>
+    <div class="reveal">Đúng: nhân hoá. Trăng được tả như người đang nhìn qua khe cửa vào nhà thơ.</div>
+  </div>
+
+  <div class="q"><div class="qn">3. Trong Chiều tối, chữ “hồng” được gọi là?</div>
+    <div class="opts">
+      <button data-ok="1">A. Nhãn tự</button>
+      <button data-ok="0">B. Từ láy</button>
+      <button data-ok="0">C. Điển cố</button>
+      <button data-ok="0">D. Hoán dụ</button>
+    </div>
+    <div class="reveal">Đúng: nhãn tự, vì chữ “hồng” làm sáng cả bài thơ.</div>
+  </div>
+
+  <div class="q"><div class="qn">4. Câu 4 của Nghe tiếng giã gạo nói về điều gì?</div>
+    <div class="opts">
+      <button data-ok="0">A. Cách giã gạo cho đúng</button>
+      <button data-ok="1">B. Gian nan rèn luyện con người thành người tốt</button>
+      <button data-ok="0">C. Việc nấu cơm trong tù</button>
+      <button data-ok="0">D. Tình yêu quê hương</button>
+    </div>
+    <div class="reveal">Đúng: gian nan là dịp rèn giũa con người thành ngọc.</div>
+  </div>
+
+  <div class="q"><div class="qn">5. Bài Cảnh báo (Bài 74) thể hiện rõ nhất biện pháp nào?</div>
+    <div class="opts">
+      <button data-ok="0">A. Ẩn dụ</button>
+      <button data-ok="1">B. Tượng thanh “ào ào”</button>
+      <button data-ok="0">C. Chiết tự</button>
+      <button data-ok="0">D. Điển cố</button>
+    </div>
+    <div class="reveal">Đúng: tượng thanh “ào ào”, gợi tiếng máy bay và đám đông chạy.</div>
+  </div>
+
+  <div class="q"><div class="qn">6. Vì sao nhà đương cục lại mời vợ người bị bắt lính vào tù?</div>
+    <div class="opts">
+      <button data-ok="0">A. Vì họ thương vợ cô quạnh thật lòng</button>
+      <button data-ok="1">B. Đó là lời mỉa mai: bắt chồng đi lính rồi “thương” vợ mà mời vào tù</button>
+      <button data-ok="0">C. Vì người vợ đã phạm tội</button>
+      <button data-ok="0">D. Để người vợ làm việc nhà cho lao</button>
+    </div>
+    <div class="reveal">Đúng: đây là nghịch lý mỉa mai của chính quyền.</div>
+  </div>
+
+  <div class="lh"><b>B</b><span>Trả lời ngắn</span></div>
+  <div class="q"><div class="qn">7. Tìm điệp ngữ trong bài Cái cùm và nêu tác dụng.</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q"><div class="qn">8. Bài Hoàng hôn (Bài 64): chỉ một cặp so sánh và cho biết nó gợi cảm xúc gì.</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q"><div class="qn">9. Bài Không ngủ được: cấu trúc “canh một… canh hai… canh ba” có tác dụng gì?</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q"><div class="qn">10. Bài Ghẻ lở: chỉ một nghịch lý châm biếm và nêu ý nghĩa.</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q"><div class="qn">11. Bài Chiết tự (Bài 75): “rồng sẽ bay ra” là ẩn dụ cho điều gì?</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q"><div class="qn">12. Bài Lại một người nữa…: nêu điển cố và tác dụng khi đặt cạnh người tù cờ bạc.</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q"><div class="qn">13. Vì sao em không nên dùng từ “khốn nạn” với nghĩa “khó khăn” khi nói tiếng Việt hôm nay?</div><div class="blank"></div><div class="blank"></div></div>
+  <div class="q" style="border:2px dashed var(--coral)"><div class="qn">14. Viết đoạn văn 3–5 câu phân tích ẩn dụ “ngọc” trong Nghe tiếng giã gạo, dùng mẫu 3 bước ở phần Nghệ thuật.</div><div class="blank"></div><div class="blank"></div><div class="blank"></div><div class="blank"></div></div>
+</section>
+
+<section class="sec" id="dap-an">
+  <div class="kicker">Phần 5 · Đáp án gợi ý</div>
+  <h2>Đáp án</h2>
+  <div class="bar"></div>
+  <div class="card">
+    <p><b>Trắc nghiệm:</b> 1-B · 2-B (nhân hoá) · 3-A (nhãn tự) · 4-B · 5-B (tượng thanh “ào ào”) · 6-B (mỉa mai).</p>
+    <p style="margin-top:10px"><b>7.</b> Điệp “nuốt chân”: “đêm đêm há hốc nuốt chân người; người nào cũng bị nuốt chân phải”. Điệp này nhấn mạnh ai cũng bị giam hãm; câu cuối “chỉ còn chân trái co duỗi được thôi” gợi sự tù túng đến cùng cực.</p>
+    <p style="margin-top:10px"><b>8.</b> “Gió như gươm sắc mài đá núi; rét như giáo nhọn chích cành cây”. So sánh này gợi cái lạnh sắc buốt, khắc nghiệt trên đường đi.</p>
+    <p style="margin-top:10px"><b>9.</b> Thời gian trôi tuần tự từ canh một đến canh năm. Cấu trúc này gợi tâm trạng trằn trọc, đêm dài không ngủ được.</p>
+    <p style="margin-top:10px"><b>10.</b> Ghẻ lở “xanh đỏ đầy người như áo gấm”, gãi ngứa là “gảy đàn”, bạn tù là “khách quý”, “tri âm”. Nghịch lý này là tự trào hài hước, thể hiện tinh thần lạc quan và tình bạn trong tù.</p>
+    <p style="margin-top:10px"><b>11.</b> Chiết tự là tách và ghép bộ phận chữ Hán để tạo chữ mới. “Rồng bay ra” là ẩn dụ cho người tài thoát khỏi ngục để dựng nước; qua hoạn nạn mới rõ người trung.</p>
+    <p style="margin-top:10px"><b>12.</b> Bá Di, Thúc Tề không ăn thóc nhà Chu, chết đói trên núi Thú Dương. Đặt cạnh người tù cờ bạc chết đói trong ngục, bài thơ đối lập khí tiết cao cả với cái chết vô nghĩa, gợi xót xa và mỉa mai.</p>
+    <p style="margin-top:10px"><b>13.</b> Vì “khốn nạn” trong tiếng Việt hôm nay là từ chửi mắng, rất nặng. Nghĩa “gian nan, khó khăn” chỉ có trong chữ Hán (困難).</p>
+    <p style="margin-top:10px"><b>14. Gợi ý:</b> Tác giả sử dụng ẩn dụ “ngọc thành” ở câu 4. Biện pháp này gợi hình ảnh viên ngọc được mài giũa, đồng thời cho thấy con người có phẩm chất tốt đẹp qua gian nan. Qua đó, em thấy bài thơ khuyên mỗi người vượt qua khó khăn để trưởng thành.</p>
+  </div>
+  <div class="note" style="margin-top:14px"><b>Cho giáo viên:</b> có thể tách trang này ra trước khi phát cho học sinh, hoặc dùng để học sinh tự chấm sau khi làm bài.</div>
+  <div class="ghinho"><b class="t">★ GHI NHỚ</b><p>Ba ý cần nhớ nhất: <b>thiên nhiên → con người → ánh lửa hồng</b>; <b>nhãn tự</b> “hồng” và vẻ đẹp cổ điển – hiện đại; tinh thần <b>lạc quan</b>.</p></div>
+</section>
+
+<footer>
+  <span>Tài liệu học · Nhật ký trong tù · Hồ Chí Minh</span>
+  <span>MYP Vietnamese Language Acquisition</span>
+</footer>
+
+<script>
+(function(){
+  var fbtns=document.querySelectorAll('.fbtn');
+  var cards=document.querySelectorAll('.pc');
+  var q=document.getElementById('q');
+  var count=document.getElementById('count');
+  var grp='all';
+  function applyFilter(){
+    var t=(q.value||'').trim().toLowerCase();
+    var n=0;
+    cards.forEach(function(c){
+      var okG=(grp==='all')||(c.getAttribute('data-g')===grp);
+      var okT=!t||c.textContent.toLowerCase().indexOf(t)!==-1;
+      var show=okG&&okT;
+      c.style.display=show?'':'none';
+      if(show)n++;
+    });
+    count.textContent=n;
+  }
+  fbtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      fbtns.forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      grp=b.getAttribute('data-g');
+      applyFilter();
+    });
+  });
+  q.addEventListener('input',applyFilter);
+
+  var tbtns=document.querySelectorAll('.tbtn');
+  tbtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      tbtns.forEach(function(x){x.classList.remove('on');});
+      document.querySelectorAll('.pane').forEach(function(p){p.classList.remove('on');});
+      b.classList.add('on');
+      document.getElementById(b.getAttribute('data-p')).classList.add('on');
+    });
+  });
+
+  document.querySelectorAll('.opts button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var box=btn.closest('.q');
+      if(box.getAttribute('data-done'))return;
+      box.setAttribute('data-done','1');
+      var ok=btn.getAttribute('data-ok')==='1';
+      btn.classList.add(ok?'ok':'bad');
+      box.querySelectorAll('.opts button').forEach(function(b){
+        if(b.getAttribute('data-ok')==='1')b.classList.add('ok');
+      });
+      var r=box.querySelector('.reveal');
+      if(r)r.classList.add('on');
+    });
+  });
+  applyFilter();
+})();
+</script>
+</body>
+</html>
